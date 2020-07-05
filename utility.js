@@ -47,12 +47,16 @@ function copyIcons(iconTemplates, root, config, location) {
     for (var i = 0; i < config.length; i++) {
         var icon = get(iconTemplates, config[i]["ID"]).duplicate(iconPlaceholder, ElementPlacement.PLACEAFTER);
         set(config[i]["Text"], get(icon, "Text"));
+        if (toggle(config[i]["Optional"], get(icon, "Optional"))) {
+            toggleOnly(config[i]["Optional"], get(icon, "Optional"));
+        }
         icon = icon.merge();
         if (i > 0) {
-            cumOffset += offset("padding", config[i], config[i - 1]);
+            cumOffset += padding(config[i - 1], config[i], location["tight"]);
         }
         icon.translate(location["x"] + cumOffset, location["y"]);
-        cumOffset += offset("width", config[i]);
+        var bounds = icon.bounds;
+        cumOffset += (parseInt(bounds[2]) - parseInt(bounds[0]));
     }
     root.translate((location["width"] - cumOffset) / 2, 0);
 }
@@ -109,44 +113,7 @@ function toggleOnly(NamesOfVisible, parent) {
     }
 }
 
-function offset(dimension, config1, config2) {
-    var widths = {
-        "Opportunity set": 70,
-        "Place tile": 91,
-        "Tile owned": 76,
-        "Tile before adjacent": 76,
-        "Tile adjacent": 76,
-        "Tile anyone": 76,
-        "Tile negative": 76,
-        "Arrow": 66,
-        "Multi arrow": 66,
-        "Pay specified": 85,
-        "Decrease production grain": 53,
-        "Decrease production wood": 53,
-        "Decrease production metal": 53,
-        "Decrease production papyrus": 53,
-        "Influence": 55,
-        "Place market banner": 77,
-        "Resource": 53,
-        "Grain": 53,
-        "Wood": 53,
-        "Metal": 53,
-        "Papyrus": 53,
-        "Market up": 53,
-        "Market down": 53,
-        "Production resource": 53,
-        "Production grain": 53,
-        "Production wood": 53,
-        "Production metal": 53,
-        "Production papyrus": 53,
-        "Wealth": 76,
-        "Power": 76,
-        "Aureus": 52,
-        "Opportunity card": 47,
-        "Discard card": 60,
-        "Activate common card": 53,
-        "VP": 95,
-    };
+function padding(firstItem, secondItem, tight) {
     var noSpacingBefore = {
         "Tile adjacent": true,
         "Tile negative": true,
@@ -158,21 +125,19 @@ function offset(dimension, config1, config2) {
     var noSpacingAfter = {
         "Tile before adjacent": true,
     }
-    if (dimension === "padding") {
-        if (noSpacingBefore[config1["ID"]]) {
-            return 2;
-        } else if (noSpacingAfter[config2["ID"]]) {
-            return 2;
-        } else if (lowSpacingAfter[config2["ID"]]) {
-            return 14;
+    if (noSpacingBefore[secondItem["ID"]]) {
+        return 5;
+    } else if (noSpacingAfter[firstItem["ID"]]) {
+        return 5;
+    } else if (lowSpacingAfter[firstItem["ID"]]) {
+        return 15;
+    } else {
+        if (!tight) {
+            return 36;
         } else {
-            return 45;
+            return 24;
         }
-    } else if (dimension === "width") {
-        if (config1["ID"] === "Pay amount" || config1["ID"] === "Gain amount") {
-            return 18 + (18 * config1["Text"].length);
-        }
-        return widths[config1["ID"]];
+        
     }
 }
 

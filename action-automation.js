@@ -29,10 +29,12 @@ function fillCard(config, root, iconTemplates) {
 
     // Order, icons, text
     toggleOnly([config["Order"]], get(root, "Order"));
+    var tight = config["Tight"];
     copyIcons(iconTemplates, get(root, "Icons"), config["Icons"], {
         "x": 20,
         "y": 908,
         "width": 834,
+        "tight": tight,
     });
     set(config["Text"], get(root, "Text"));
 
