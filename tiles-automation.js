@@ -20,5 +20,7 @@ function fillTile(config, root) {
     set(config["Name"], get(root, "Name"));
     set(config["Num"], get(root, "Num"));
     set(config["Type"], get(root, "Type"));
-    toggleOnly([config["Background"]], get(root, "Background"));
+    if (toggle(config["Type"], get(root, "Background"))) {
+        toggleOnly([config["Type"]], get(root, "Background"));
+    }
 }
