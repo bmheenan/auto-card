@@ -5,12 +5,12 @@ var cardInfo = [
         "Setup": "Setup: Place Domas tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-3"},
+            {"ID": "Pay amount", "Text": "-4"},
             {"ID": "Grain"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "1", "Optional": ["Home"]},
         ],
-        "Text": "Pay 3 Grain. Place a Domas (Home) Tile.\rWhen all Domas tiles have been placed, archive this card and activate 'Place Insulae (Home)'.",
+        "Text": "Pay 4 Grain. Place a Domas (Home) Tile.\rWhen all Domas tiles have been placed, archive this card and activate 'Place Insulae (Home)'.",
         "Archived hint": "All Domas tiles have already been placed",
     },
     {
@@ -19,12 +19,12 @@ var cardInfo = [
         "Setup": "Setup: Place Insulae tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-6"},
+            {"ID": "Pay amount", "Text": "-8"},
             {"ID": "Grain"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "2", "Optional": ["Home"]},
         ],
-        "Text": "Pay 6 Grain. Place an Insulae (Home) Tile.\rWhen all Insulae tiles have been placed, archive this card.",
+        "Text": "Pay 8 Grain. Place an Insulae (Home) Tile.\rWhen all Insulae tiles have been placed, archive this card.",
         "Archived hint": "Activates when all Domas tiles have been placed",
     },
     {
@@ -46,12 +46,12 @@ var cardInfo = [
         "Setup": "Setup: Place Artisian tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-4"},
+            {"ID": "Pay amount", "Text": "-5"},
             {"ID": "Wood"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "4", "Optional": ["Shop"]},
         ],
-        "Text": "Pay 4 Wood. Place an Artisian (Shop) Tile.\rWhen all Artisian tiles have been placed, archive this card and activate 'Place Forum (Shop)'.",
+        "Text": "Pay 5 Wood. Place an Artisian (Shop) Tile.\rWhen all Artisian tiles have been placed, archive this card and activate 'Place Forum (Shop)'.",
         "Archived hint": "All Artisian tiles have already been placed",
     },
     {
@@ -60,12 +60,12 @@ var cardInfo = [
         "Setup": "Setup: Place Forum tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-8"},
+            {"ID": "Pay amount", "Text": "-10"},
             {"ID": "Wood"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "5", "Optional": ["Shop"]},
         ],
-        "Text": "Pay 8 Wood. Place a Forum (Shop) Tile.\rWhen all Forum tiles have been placed, archive this card.",
+        "Text": "Pay 10 Wood. Place a Forum (Shop) Tile.\rWhen all Forum tiles have been placed, archive this card.",
         "Archived hint": "Activates when all Artisian tiles have been placed",
     },
     {
@@ -87,12 +87,12 @@ var cardInfo = [
         "Setup": "Setup: Place Temple tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-5"},
+            {"ID": "Pay amount", "Text": "-7"},
             {"ID": "Metal"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "7", "Optional": ["Temple"]},
         ],
-        "Text": "Pay 5 Metal. Place a Temple Tile.\rWhen all Temple tiles have been placed, archive this card.",
+        "Text": "Pay 7 Metal. Place a Temple Tile.\rWhen all Temple tiles have been placed, archive this card.",
         "Archived hint": "All Temple tiles have already been placed",
     },
     {
@@ -114,12 +114,12 @@ var cardInfo = [
         "Setup": "Setup: Place Library tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-3"},
+            {"ID": "Pay amount", "Text": "-4"},
             {"ID": "Papyrus"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "9", "Optional": ["Civic"]},
         ],
-        "Text": "Pay 3 Papyrus. Place a Library (Civic) Tile.\rWhen all Library tiles have been placed, archive this card and activate 'Place Court (Civic)'.",
+        "Text": "Pay 4 Papyrus. Place a Library (Civic) Tile.\rWhen all Library tiles have been placed, archive this card and activate 'Place Court (Civic)'.",
         "Archived hint": "All Library tiles have already been placed",
     },
     {
@@ -128,12 +128,12 @@ var cardInfo = [
         "Setup": "Setup: Place Court tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-6"},
+            {"ID": "Pay amount", "Text": "-8"},
             {"ID": "Papyrus"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "10", "Optional": ["Civic"]},
         ],
-        "Text": "Pay 6 Papyrus. Place a Court (Civic) Tile.\rWhen all Court tiles have been placed, archive this card and activate 'Place Comitium (Civic)'.",
+        "Text": "Pay 8 Papyrus. Place a Court (Civic) Tile.\rWhen all Court tiles have been placed, archive this card and activate 'Place Comitium (Civic)'.",
         "Archived hint": "Activates when all Library tiles have been placed",
     },
     {
@@ -142,12 +142,12 @@ var cardInfo = [
         "Setup": "Setup: Place Comitium tiles here.",
         "Type": "Common project",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-10"},
+            {"ID": "Pay amount", "Text": "-12"},
             {"ID": "Papyrus"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "11", "Optional": ["Civic"]},
         ],
-        "Text": "Pay 10 Papyrus. Place a Comitium (Civic) Tile.\rWhen all Comitium tiles have been placed, archive this card.",
+        "Text": "Pay 12 Papyrus. Place a Comitium (Civic) Tile.\rWhen all Comitium tiles have been placed, archive this card.",
         "Archived hint": "Activates when all Court tiles have been placed",
     },
     {
