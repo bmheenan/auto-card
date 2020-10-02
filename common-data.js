@@ -33,11 +33,10 @@ var cardInfo = [
         "Type": "Boon",
         "Icons": [
             {"ID": "Tile owned", "Text": "H", "Optional": ["Home"]},
-            {"ID": "Tile owned", "Text": "H", "Optional": ["Home"]},
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "1"},
         ],
-        "Text": "Every 2 owned Home tiles: +1 VP.",
+        "Text": "Every owned Home: +1 VP.",
         "Always active": true,
     },
     {
@@ -82,7 +81,7 @@ var cardInfo = [
         "Always active": true,
     },
     {
-        "Name": "Place Temple",
+        "Name": "Place Temple (Religion)",
         "Num": "7",
         "Setup": "Setup: Place Temple tiles here.",
         "Type": "Common project",
@@ -92,12 +91,26 @@ var cardInfo = [
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "7", "Optional": ["Temple"]},
         ],
-        "Text": "Pay 6 Metal. Place a Temple Tile.\rWhen all Temple tiles have been placed, archive this card.",
+        "Text": "Pay 6 Metal. Place a Temple Tile.\rWhen all Temple tiles have been placed, archive this card and activate 'Place Pantheon (Religion)'.",
         "Archived hint": "All Temple tiles have already been placed",
     },
     {
-        "Name": "Temples",
+        "Name": "Place Pantheon (Religion)",
         "Num": "8",
+        "Setup": "Setup: Place Pantheon tiles here.",
+        "Type": "Common project",
+        "Icons": [
+            {"ID": "Pay amount", "Text": "-10"},
+            {"ID": "Metal"},
+            {"ID": "Arrow"},
+            {"ID": "Place tile", "Text": "8", "Optional": ["Temple"]},
+        ],
+        "Text": "Pay 10 Metal. Place a Pantheon Tile.\rWhen all Pantheon tiles have been placed, archive this card.",
+        "Archived hint": "Activates when all Temple tiles have been placed",
+    },
+    {
+        "Name": "Religion",
+        "Num": "9",
         "Type": "Boon",
         "Icons": [
             {"ID": "Tile owned", "Text": "T", "Optional": ["Temple"]},
@@ -110,7 +123,7 @@ var cardInfo = [
     },
     {
         "Name": "Place Library (Civic)",
-        "Num": "9",
+        "Num": "10",
         "Setup": "Setup: Place Library tiles here.",
         "Type": "Common project",
         "Icons": [
@@ -124,7 +137,7 @@ var cardInfo = [
     },
     {
         "Name": "Place Court (Civic)",
-        "Num": "10",
+        "Num": "11",
         "Setup": "Setup: Place Court tiles here.",
         "Type": "Common project",
         "Icons": [
@@ -138,7 +151,7 @@ var cardInfo = [
     },
     {
         "Name": "Place Comitium (Civic)",
-        "Num": "11",
+        "Num": "12",
         "Setup": "Setup: Place Comitium tiles here.",
         "Type": "Common project",
         "Icons": [
@@ -152,7 +165,7 @@ var cardInfo = [
     },
     {
         "Name": "Amphitheatres",
-        "Num": "12",
+        "Num": "13",
         "Setup": "Setup: Place Amphitheatre tiles here.",
         "Type": "Boon",
         "Icons": [
@@ -166,7 +179,7 @@ var cardInfo = [
     },
     {
         "Name": "Oracles",
-        "Num": "13",
+        "Num": "14",
         "Setup": "Setup: Place Oracle tiles here.",
         "Type": "Boon",
         "Icons": [
@@ -180,7 +193,7 @@ var cardInfo = [
     },
     {
         "Name": "Barracks (Military)",
-        "Num": "14",
+        "Num": "15",
         "Setup": "Setup: Place Barracks tiles here.",
         "Type": "Boon",
         "Icons": [
@@ -194,7 +207,7 @@ var cardInfo = [
     },
     {
         "Name": "Parades (Military)",
-        "Num": "15",
+        "Num": "16",
         "Setup": "Setup: Place Parade tiles here.",
         "Type": "Boon",
         "Icons": [
