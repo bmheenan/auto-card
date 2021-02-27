@@ -82,9 +82,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "B", "Optional": ["Military"]},
             {"ID": "Tile owned", "Optional": ["Military"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "2X"},
+            {"ID": "VP", "Text": "X"},
         ],
-        "Boon": "Every owned Barracks: +2 VP for each owned Military building (including itself).",
+        "Boon": "Every owned Barracks: +1 VP for each owned Military building (including itself).",
     },
     {
         "Name": "Parades",

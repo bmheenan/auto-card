@@ -28,7 +28,7 @@ function automateCards(params) {
 
         if (params["Unique backs"]) {
             for (var i = 0; i < cards.length; i++) {
-                params["Back function"](cardInfo[i], cards[i], iconTemplates);
+                params["Back function"](cardInfo[((currentSheet - 1) * cardsPerSheet) + i], cards[i], iconTemplates);
             }
             exportPng(params["Export path"] + params["Export name prefix"] + " back " + currentSheet + ".png");
         }
