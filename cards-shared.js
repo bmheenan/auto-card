@@ -44,9 +44,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "6"},
+            {"ID": "VP", "Text": "10"},
         ],
-        "Boon": "Whoever owns the most Libraries: +6 VP.\rSplit the points (rounded down) in case of a tie.",
+        "Boon": "Whoever owns the most Libraries: +10 VP.\rSplit the points (rounded down) in case of a tie.",
     },
     {
         "Name": "Amphitheatres",
