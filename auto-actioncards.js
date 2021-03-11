@@ -29,8 +29,8 @@ function go() {
         cards.push(cardsP3[i])
     }
     automateCards({
-        "Rows": 4,
-        "Columns": 6,
+        "Rows": 5,
+        "Columns": 8,
         "Export path": "/Users/brandonheenan/photoshopexport/",
         "Export name prefix": "cards action",
         "Card width": 1000,
@@ -46,7 +46,7 @@ function fillCard(config, root, iconTemplates) {
     // Header
     set(config["Name"], get(root, "Name"));
     if (toggle(config["Type"] === "Starting", get(get(root, "Type"), "Starting"))) {
-        toggleOnly([config["Player"]], get(get(root, "Type"), "Starting"));
+        toggleOnly([config["Player"]], get(get(get(root, "Type"), "Starting"), "Player"));
     }
     if (toggle(config["Type"] === "Opportunity", get(get(root, "Type"), "Opportunity"))) {
         toggleOnly([config["Period"]], get(get(get(root, "Type"), "Opportunity"), "Period"));

@@ -4,8 +4,8 @@ go();
 
 function go() {
     automateCards({
-        "Rows": 4,
-        "Columns": 6,
+        "Rows": 5,
+        "Columns": 8,
         "Export path": "/Users/brandonheenan/photoshopexport/",
         "Export name prefix": "cards shared",
         "Card width": 1000,
