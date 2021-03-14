@@ -376,7 +376,7 @@ var cardsP3 = [
     {
         "Name": "Favorable selling contract",
         "Type": "Opportunity",
-        "Period": "Imperial",
+        "Period": "Fracture",
         "Players": "2+",
         "Image": "Ship",
         "Icons": [

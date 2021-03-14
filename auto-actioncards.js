@@ -29,8 +29,8 @@ function go() {
         cards.push(cardsP3[i])
     }
     automateCards({
-        "Rows": 5,
-        "Columns": 8,
+        "Rows": 4,
+        "Columns": 6,
         "Export path": "/Users/brandonheenan/photoshopexport/",
         "Export name prefix": "cards action",
         "Card width": 1000,

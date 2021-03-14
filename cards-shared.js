@@ -18,9 +18,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "S", "Optional": ["Shop"]},
             {"ID": "Tile adjacent", "Text": "T", "Optional": ["Temple"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "3"},
+            {"ID": "VP", "Text": "2"},
         ],
-        "Boon": "Every owned Shop adjacent to at least 1 Temple: +3 VP.",
+        "Boon": "Every owned Shop adjacent to at least 1 Temple: +2 VP.",
     },
     {
         "Name": "Temples",
@@ -31,9 +31,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "T", "Optional": ["Temple"]},
             {"ID": "Tile adjacent", "Text": "H", "Optional": ["Home"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "2X"},
+            {"ID": "VP", "Text": "X"},
         ],
-        "Boon": "Every owned Temple: +2 VP for each adjacent Home.",
+        "Boon": "Every owned Temple: +1 VP for each adjacent Home.",
     },
     {
         "Name": "Libraries",
@@ -44,9 +44,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "10"},
+            {"ID": "VP", "Text": "7"},
         ],
-        "Boon": "Whoever owns the most Libraries: +10 VP.\rSplit the points (rounded down) in case of a tie.",
+        "Boon": "Whoever owns the most Libraries: +7 VP.\rSplit the points (rounded down) in case of a tie.",
     },
     {
         "Name": "Amphitheatres",
@@ -56,9 +56,9 @@ var cardsShared = [
             {"ID": "Tile owned", "Text": "A"},
             {"ID": "Tile negative", "Text": "S", "Optional": ["Shop"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "6-2X"},
+            {"ID": "VP", "Text": "5-2X"},
         ],
-        "Boon": "Every owned Amphitheatre: +6 VP -2VP for each adjacent Shop. (Minimum 0 VP)",
+        "Boon": "Every owned Amphitheatre: +5 VP -2VP for each adjacent Shop (Minimum 0 VP).",
     },
     {
         "Name": "Oracles",
@@ -94,8 +94,8 @@ var cardsShared = [
         "Icons": [
             {"ID": "Tile owned", "Text": "P", "Optional": ["Military"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "5"},
+            {"ID": "VP", "Text": "4"},
         ],
-        "Boon": "Every owned Parade: +5 VP.",
+        "Boon": "Every owned Parade: +4 VP.",
     },
 ]

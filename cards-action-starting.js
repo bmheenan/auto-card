@@ -2,13 +2,13 @@ var cardsStartingBase = [
     {
         "Name": "Gain new Opportunities",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-2/5/10"},
+            {"ID": "Pay amount", "Text": "-2/4/8"},
             {"ID": "Influence"},
             {"ID": "Arrow"},
             {"ID": "Gain amount", "Text": "2/3/4"},
             {"ID": "Opportunity card"}
         ],
-        "Text": "Do any one of the following:\r - Pay 2 Influence. Gain 2 Opportunities.\r - Pay 5 Influence. Gain 3 Opportunities.\r - Pay 10 Influence. Gain 4 Opportunities.",
+        "Text": "Do any one of the following:\r - Pay 2 Influence. Gain 2 Opportunities.\r - Pay 4 Influence. Gain 3 Opportunities.\r - Pay 8 Influence. Gain 4 Opportunities.",
         "End": "Return",
         "Benefit icon": [{"ID": "Opportunity card"}],
     },
@@ -16,7 +16,7 @@ var cardsStartingBase = [
         "Name": "Build Common buildings",
         "Image": "Building",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-0/2/6"},
+            {"ID": "Pay amount", "Text": "-0/2/5"},
             {"ID": "Influence"},
             {"ID": "Pay amount", "Text": "-X"},
             {"ID": "Resource"},
@@ -24,7 +24,7 @@ var cardsStartingBase = [
             {"ID": "Gain amount", "Text": "1/2/3"},
             {"ID": "Place tile", "Text": "X"}
         ],
-        "Text": "Do any one of the following:\r - Build a Common building.\r - Pay 2 Influence. Build 2 Common buildings.\r - Pay 6 Influence. Build 3 Common buildings.",
+        "Text": "Do any one of the following:\r - Build a Common building.\r - Pay 2 Influence. Build 2 Common buildings.\r - Pay 5 Influence. Build 3 Common buildings.",
         "End": "Return",
         "Benefit icon": [{"ID": "Place tile"}],
     },
@@ -39,7 +39,7 @@ var cardsStartingBase = [
             {"ID": "Gain amount", "Text": "+3"},
             {"ID": "Resource"},
         ],
-        "Text": "Increase the price of a resource by 1. Pay the new price in Aureus and gain 3 of that resource.\rRepeat as many times as you want for the same resource.",
+        "Text": "Increase the price of a resource by 1. Pay the new price in Aureus and gain 3 of that resource.\rRepeat as many times as you want.",
         "End": "Return",
         "Benefit icon": [{"ID": "Resource"}],
     },
@@ -54,7 +54,7 @@ var cardsStartingBase = [
             {"ID": "Gain amount", "Text": "+X"},
             {"ID": "Aureus"},
         ],
-        "Text": "Decrease the price of a resource by 1. Pay 3 of that resource and gain the new price in Aureus.\rRepeat as many times as you want for the same resource.",
+        "Text": "Decrease the price of a resource by 1. Pay 3 of that resource and gain the new price in Aureus.\rRepeat as many times as you want.",
         "End": "Return",
         "Benefit icon": [{"ID": "Aureus"}],
     },

@@ -4,8 +4,8 @@ go();
 
 function go() {
     automateCards({
-        "Rows": 8,
-        "Columns": 8,
+        "Rows": 6,
+        "Columns": 6,
         "Export path": "/Users/brandonheenan/photoshopexport/",
         "Export name prefix": "tiles",
         "Card width": 1000,
