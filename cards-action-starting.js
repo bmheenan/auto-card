@@ -2,15 +2,15 @@ var cardsStartingBase = [
     {
         "Name": "Gain new Opportunities",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-2/4/8"},
+            {"ID": "Pay amount", "Text": "-0/2/5"},
             {"ID": "Influence"},
             {"ID": "Arrow"},
-            {"ID": "Gain amount", "Text": "2/3/4"},
-            {"ID": "Opportunity card"}
+            {"ID": "Gain amount", "Text": "1/2/3"},
+            {"ID": "Opportunity"}
         ],
-        "Text": "Do any one of the following:\r - Pay 2 Influence. Gain 2 Opportunities.\r - Pay 4 Influence. Gain 3 Opportunities.\r - Pay 8 Influence. Gain 4 Opportunities.",
+        "Text": "Do any one of the following:\r - Gain an Opportunity.\r - Pay 2 Influence. Gain 2 Opportunities.\r - Pay 5 Influence. Gain 3 Opportunities.",
         "End": "Return",
-        "Benefit icon": [{"ID": "Opportunity card"}],
+        "Benefit icon": [{"ID": "Opportunity"}],
     },
     {
         "Name": "Build Common buildings",

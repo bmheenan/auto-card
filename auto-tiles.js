@@ -22,7 +22,8 @@ function fillTile(config, root) {
     if (toggle(config["Type"], get(root, "Type"))) {
         set(config["Type"], get(root, "Type"));
     }
-    toggle(false, get(root, "Common cost"))
+    toggle(false, get(root, "Common cost"));
+    toggle(false, get(root, "Order"));
     if (toggle(config["Background"], get(root, "Background"))) {
         toggleOnly([config["Background"]], get(root, "Background"));
     }
@@ -30,7 +31,10 @@ function fillTile(config, root) {
 
 function fillBack(config, root) {
     if (toggle(config["Cost"], get(root, "Common cost"))) {
-        set(config["Cost"], get(get(root, "Common cost"), "Pay amount"))
-        toggleOnly([config["Resource"]], get(get(root, "Common cost"), "Resource type"))
+        set(config["Cost"], get(get(root, "Common cost"), "Pay amount"));
+        set(config["Next"], get(get(root, "Common cost"), "Next cost"));
+        toggle(true, get(root, "Order"));
+        set(config["Order"], get(root, "Order"));
+        toggleOnly([config["Resource"]], get(get(root, "Common cost"), "Resource type"));
     }
 }

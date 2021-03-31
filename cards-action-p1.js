@@ -2,6 +2,69 @@
 
 var cardsP1 = [
 
+    // 4 - free resource
+    
+    {
+        "Name": "Good harvest",
+        "Type": "Opportunity",
+        "Period": "Republican",
+        "Image": "Farming",
+        "Order": "Immediate",
+        "Icons": [
+            {"ID": "Arrow"},
+            {"ID": "Gain amount", "Text": "+3"},
+            {"ID": "Grain"},
+        ],
+        "Text": "Gain 3 Grain.",
+        "End": "Discard",
+        "Benefit icon": [{"ID": "Grain"}],
+    },
+    {
+        "Name": "Workmanship",
+        "Type": "Opportunity",
+        "Period": "Republican",
+        "Image": "Ceiling",
+        "Order": "Immediate",
+        "Icons": [
+            {"ID": "Arrow"},
+            {"ID": "Gain amount", "Text": "+3"},
+            {"ID": "Wood"},
+        ],
+        "Text": "Gain 3 Wood.",
+        "End": "Discard",
+        "Benefit icon": [{"ID": "Wood"}],
+    },
+    {
+        "Name": "Bet on the right Gladiator",
+        "Type": "Opportunity",
+        "Period": "Republican",
+        "Image": "Warriors",
+        "Order": "Immediate",
+        "Icons": [
+            {"ID": "Arrow"},
+            {"ID": "Gain amount", "Text": "+3"},
+            {"ID": "Metal"},
+        ],
+        "Text": "Gain 3 Metal.",
+        "End": "Discard",
+        "Benefit icon": [{"ID": "Metal"}],
+    },
+    {
+        "Name": "Inheritence",
+        "Type": "Opportunity",
+        "Period": "Republican",
+        "Image": "Family",
+        "Order": "Immediate",
+        "Icons": [
+            {"ID": "Arrow"},
+            {"ID": "Gain amount", "Text": "+3"},
+            {"ID": "Papyrus"},
+        ],
+        "Text": "Gain 3 Papyrus.",
+        "End": "Discard",
+        "Benefit icon": [{"ID": "Papyrus"}],
+    },
+    
     // 6 - Resource with pillar
 
     {
@@ -98,13 +161,13 @@ var cardsP1 = [
         "Icons": [
             {"ID": "Pay amount", "Text": "-2"},
             {"ID": "Influence"},
-            {"ID": "Pay amount", "Text": "-4"},
+            {"ID": "Pay amount", "Text": "-3"},
             {"ID": "Papyrus"},
             {"ID": "Arrow"},
             {"ID": "Gain amount", "Text": "+4"},
             {"ID": "Metal"},
         ],
-        "Text": "Pay 2 Influence and 4 Papyrus. Gain 4 Metal.",
+        "Text": "Pay 2 Influence and 3 Papyrus. Gain 4 Metal.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Aureus"}],
         "Trigger text": "When the card above gains Aureus, gain 1 Metal.",
@@ -448,13 +511,13 @@ var cardsP1 = [
             {"ID": "Pay amount", "Text": "-1"},
             {"ID": "Influence"},
             {"ID": "Pay amount", "Text": "-6"},
-            {"ID": "Papyrus"},
+            {"ID": "Wood"},
             {"ID": "Arrow"},
             {"ID": "Gain amount", "Text": "+1"},
             {"ID": "Wealth"},
         ],
         "Tight": true,
-        "Text": "Dedicate 2 Shops. Pay 1 Influence and 6 Papyrus. Increase your Wealth by 1.",
+        "Text": "Dedicate 2 Shops. Pay 1 Influence and 6 Wood. Increase your Wealth by 1.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Production resource"}],
         "Trigger text": "When the card above increases your Grain, Wood, Metal, or Papyrus production, increase your Wealth by 1.",
@@ -469,7 +532,6 @@ var cardsP1 = [
         "Period": "Republican",
         "Players": "2+",
         "Image": "Building",
-        "Order": "Immediate",
         "Icons": [
             {"ID": "Pay amount", "Text": "-1"},
             {"ID": "Influence"},
@@ -477,13 +539,13 @@ var cardsP1 = [
             {"ID": "Wood"},
             {"ID": "Arrow"},
             {"ID": "Gain amount", "Text": "+1"},
-            {"ID": "Opportunity card"},
+            {"ID": "Opportunity"},
         ],
         "Text": "Pay 1 Influence and 7 Wood. Gain 1 Opportunity.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Place tile", "Optional": ["Multi"]}],
         "Trigger text": "When the card above places a tile, gain 1 Opportunity.",
-        "Benefit icon": [{"ID": "Opportunity card"}],
+        "Benefit icon": [{"ID": "Opportunity"}],
     },
 
     // 1 - Aureus

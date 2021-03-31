@@ -1,6 +1,6 @@
 var cardsShared = [
     {
-        "Name": "Domas",
+        "Name": "Domus",
         "Caption": "Common",
         "Image": "Family",
         "Icons": [
@@ -8,7 +8,7 @@ var cardsShared = [
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "1"},
         ],
-        "Boon": "Every owned Domas: +1 VP.",
+        "Boon": "Every owned Domus: +1 VP.",
     },
     {
         "Name": "Shops",
@@ -29,11 +29,11 @@ var cardsShared = [
         "Image": "Family",
         "Icons": [
             {"ID": "Tile owned", "Text": "T", "Optional": ["Temple"]},
-            {"ID": "Tile adjacent", "Text": "H", "Optional": ["Home"]},
+            {"ID": "Tile adjacent", "Text": "D", "Optional": ["Home"]},
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "X"},
         ],
-        "Boon": "Every owned Temple: +1 VP for each adjacent Home.",
+        "Boon": "Every owned Temple: +1 VP for each adjacent Domus.",
     },
     {
         "Name": "Libraries",

@@ -42,6 +42,21 @@ function go() {
 }
 
 function fillCard(config, root, iconTemplates) {
+
+    // The last generation card is special
+    if (config["Type"] === "Last generation") {
+        set("Last generation", get(root, "Name"));
+        set("If this card is visible: this is the last generation of the game.", get(root, "Text"))
+        toggleOnly("Cityscape", get(root, "Flavor image"))
+        toggle(false, get(root, "Type"));
+        toggle(false, get(root, "Order"));
+        toggle(false, get(root, "Type"));
+        toggle(false, get(root, "Trigger text"));
+        toggle(false, get(root, "Trigger icon"));
+        toggle(false, get(root, "Benefit icon"));
+        toggle(false, get(root, "End of generation"));
+        return
+    }
     
     // Header
     set(config["Name"], get(root, "Name"));

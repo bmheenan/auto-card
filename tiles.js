@@ -1,6 +1,6 @@
 var tileSummary = [
     {
-        "Name": "Domas",
+        "Name": "Domus",
         "Background": "Home",
         "Resource": "Grain",
         "Costs": [
@@ -13,18 +13,11 @@ var tileSummary = [
             -4,
             -4,
             -4,
-            -4,
-            -5,
-            -5,
             -5,
             -5,
             -5,
             -6,
             -6,
-            -6,
-            -6,
-            -7,
-            -7,
             -7,
             -8,
             -9,
@@ -50,12 +43,7 @@ var tileSummary = [
             -7,
             -8,
             -8,
-            -8,
             -9,
-            -9,
-            -9,
-            -10,
-            -10,
         ],
     },
     {
@@ -68,18 +56,13 @@ var tileSummary = [
             -5,
             -6,
             -6,
+            -6,
             -7,
             -7,
             -7,
             -8,
             -8,
             -9,
-            -9,
-            -10,
-            -11,
-            -12,
-            -14,
-            -16,
         ],
         "Type": "Religion",
     },
@@ -93,23 +76,17 @@ var tileSummary = [
             -5,
             -6,
             -6,
+            -6,
             -7,
             -7,
-            -7,
-            -8,
-            -8,
             -8,
             -9,
             -10,
-            -11,
-            -12,
-            -14,
-            -16,
-            -18,
         ],
     },
     {
         "Name": "Amphitheatre",
+        "Background": "Amphitheatre",
         "Repeat": 3,
     },
     {
@@ -136,12 +113,28 @@ var tileInfo = [];
 for (var i = 0; i < tileSummary.length; i++) {
     if (tileSummary[i]["Costs"]) {
         for (var j = 0; j < tileSummary[i]["Costs"].length; j++) {
+            // Figure out the "next" costs
+            var next = ""
+            if (j + 1 === tileSummary[i]["Costs"].length) {
+                next = "Last";
+            } else {
+                var maxK = j + 3;
+                next = "Next:  "
+                for (var k = j + 1; k < tileSummary[i]["Costs"].length && k <= maxK; k++) {
+                    next = next + tileSummary[i]["Costs"][k];
+                    if (k + 1 < tileSummary[i]["Costs"].length && k + 1 <= maxK) {
+                        next = next + ",  ";
+                    }
+                }
+            }
             tileInfo.push({
                 "Name": tileSummary[i]["Name"],
                 "Type": tileSummary[i]["Type"],
                 "Background": tileSummary[i]["Background"],
                 "Resource": tileSummary[i]["Resource"],
                 "Cost": tileSummary[i]["Costs"][j],
+                "Next": next,
+                "Order": "#" + (j + 1),
             });
         }
     } else {
