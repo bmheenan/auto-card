@@ -86,12 +86,11 @@ function fillCard(config, root, iconTemplates) {
     // Immediate, first, icons, text
     toggle(config["Order"] === "Immediate", get(get(root, "Order"), "Immediate"));
     toggle(config["Order"] === "First", get(get(root, "Order"), "First"));
-    var tight = config["Tight"];
     copyIcons(iconTemplates, get(root, "Icons"), config["Icons"], {
         "x": 20,
-        "y": 860,
+        "y": 850,
         "width": 834,
-        "tight": tight,
+        "tight": config["Tight"],
     });
     set(config["Text"], get(root, "Text"));
 
@@ -100,7 +99,7 @@ function fillCard(config, root, iconTemplates) {
     if (config["Trigger icon"]) {
         copyIcons(iconTemplates, get(root, "Trigger icon"), config["Trigger icon"], {
             "x": 874,
-            "y": 1104,
+            "y": 1083,
             "width": 90,
         });
     }
