@@ -1,7 +1,7 @@
 // Imperial period
 
 var cardsP2 = [
-    {
+    /*{
         "Name": "Bountiful harvest",
         "Type": "Opportunity",
         "Period": "Imperial",
@@ -19,7 +19,7 @@ var cardsP2 = [
         "Trigger icon": [{"ID": "Production resource"}],
         "Trigger text": "When the card above increases your Grain, Wood, Metal, or Papyrus production, gain 1 Grain.",
         "Benefit icon": [{"ID": "Grain"}],
-    },
+    },*/
     {
         "Name": "Tree cutting imports",
         "Type": "Opportunity",
@@ -161,7 +161,7 @@ var cardsP2 = [
         "Trigger text": "When the card above increases your Power, increase your Papyrus production by 1.",
         "Benefit icon": [{"ID": "Production papyrus"}],
     },
-    {
+    /*{
         "Name": "Martial labor",
         "Type": "Opportunity",
         "Period": "Imperial",
@@ -175,7 +175,7 @@ var cardsP2 = [
         "Text": "Dedicate a Military building. Increase your Grain, Wood, Metal, or Papyrus production by 1.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Production resource"}],
-    },
+    },*/
     {
         "Name": "Offering collection",
         "Type": "Opportunity",
@@ -230,7 +230,7 @@ var cardsP2 = [
         "End": "Discard",
         "Benefit icon": [{"ID": "Wealth"}],
     },
-    {
+    /*{
         "Name": "Distinguished service",
         "Type": "Opportunity",
         "Period": "Imperial",
@@ -248,14 +248,14 @@ var cardsP2 = [
         "Text": "Pay 6 Metal and dedicate a Domus adjacent to a Military building and a Library. Increase your Power by 1.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Power"}],
-    },
+    },*/
     {
         "Name": "Guild leadership",
         "Type": "Opportunity",
         "Period": "Imperial",
         "Image": "Ceiling",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-3"},
+            {"ID": "Pay amount", "Text": "-2"},
             {"ID": "Influence"},
             {"ID": "Dedicate tile", "Text": "S", "Optional": ["Shop"]},
             {"ID": "Dedicate tile", "Text": "S", "Optional": ["Shop"]},
@@ -263,7 +263,7 @@ var cardsP2 = [
             {"ID": "Gain amount", "Text": "+1"},
             {"ID": "Wealth"},
         ],
-        "Text": "Pay 3 Influence and dedicate 2 Shops. Increase your Wealth by 1.",
+        "Text": "Pay 2 Influence and dedicate 2 Shops. Increase your Wealth by 1.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Production resource"}],
         "Trigger text": "When the card above increases your Grain, Wood, Metal, or Papyrus production, increase your Wealth by 1.",
@@ -298,18 +298,18 @@ var cardsP2 = [
         "Icons": [
             {"ID": "Pay amount", "Text": "-1"},
             {"ID": "Influence"},
-            {"ID": "Pay amount", "Text": "-6"},
+            {"ID": "Pay amount", "Text": "-5"},
             {"ID": "Grain"},
             {"ID": "Pay amount", "Text": "-5"},
             {"ID": "Metal"},
             {"ID": "Arrow"},
             {"ID": "Place tile", "Text": "B", "Optional": ["Military"]},
         ],
-        "Text": "Pay 1 Influence, 6 Grain, and 5 Metal. Build a Barracks.",
+        "Text": "Pay 1 Influence, 5 Grain, and 5 Metal. Build a Barracks.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Place tile", "Optional": ["Military"]}],
     },
-    {
+    /*{
         "Name": "Barracks",
         "Type": "Opportunity",
         "Period": "Imperial",
@@ -327,7 +327,7 @@ var cardsP2 = [
         "Text": "Pay 2 Influence, 3 Wood, and 5 Papyrus. Build a Barracks.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Place tile", "Optional": ["Military"]}],
-    },
+    },*/
     {
         "Name": "Parade",
         "Type": "Opportunity",

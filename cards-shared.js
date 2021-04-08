@@ -5,10 +5,14 @@ var cardsShared = [
         "Image": "Family",
         "Icons": [
             {"ID": "Tile owned", "Text": "D", "Optional": ["Home"]},
+            {"ID": "Tile adjacent", "Text": "S", "Optional": ["Shop"]},
+            {"ID": "Neutral amount", "Text": "/"},
+            {"ID": "Tile owned", "Text": "D", "Optional": ["Home"]},
+            {"ID": "Tile adjacent", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "1"},
         ],
-        "Boon": "Every owned Domus: +1 VP.",
+        "Boon": "Every owned Domus adjacent to at least 1 Shop or Library: +1 VP.",
     },
     {
         "Name": "Shops",
@@ -16,11 +20,11 @@ var cardsShared = [
         "Image": "Family",
         "Icons": [
             {"ID": "Tile owned", "Text": "S", "Optional": ["Shop"]},
-            {"ID": "Tile adjacent", "Text": "T", "Optional": ["Temple"]},
+            {"ID": "Tile adjacent", "Text": "R", "Optional": ["Temple"]},
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "2"},
         ],
-        "Boon": "Every owned Shop adjacent to at least 1 Temple: +2 VP.",
+        "Boon": "Every owned Shop adjacent to at least 1 Religion building: +2 VP.",
     },
     {
         "Name": "Temples",
@@ -40,8 +44,7 @@ var cardsShared = [
         "Caption": "Common",
         "Image": "Family",
         "Icons": [
-            {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
-            {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
+            {"ID": "Gain amount", "Text": "Most"},
             {"ID": "Tile owned", "Text": "L", "Optional": ["Civic"]},
             {"ID": "Arrow"},
             {"ID": "VP", "Text": "7"},
@@ -67,11 +70,11 @@ var cardsShared = [
         "Image": "Building",
         "Icons": [
             {"ID": "Tile owned", "Text": "O", "Optional": ["Temple"]},
-            {"ID": "Tile adjacent", "Text": "T", "Optional": ["Temple"]},
+            {"ID": "Tile adjacent", "Text": "R", "Optional": ["Temple"]},
             {"ID": "Arrow"},
-            {"ID": "VP", "Text": "4X"},
+            {"ID": "VP", "Text": "3X"},
         ],
-        "Boon": "Every owned Oracle: +4VP for each adjacent Temple.",
+        "Boon": "Every owned Oracle: +3VP for each adjacent Religion building.",
     },
     {
         "Name": "Barracks",

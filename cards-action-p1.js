@@ -98,7 +98,7 @@ var cardsP1 = [
         "Trigger text": "When the card above gains a Grain, Wood, Metal, or Papyrus, gain 1 Aureus.",
         "Benefit icon": [{"ID": "Aureus"}],
     },
-    {
+    /*{
         "Name": "Double entry accounting",
         "Type": "Opportunity",
         "Period": "Republican",
@@ -156,7 +156,7 @@ var cardsP1 = [
         "Text": "Pay 3 Aureus and 2 Grain. Increase your Wood production by 1.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Production wood"}],
-    },
+    },*/
     {
         "Name": "Mining equipment",
         "Type": "Opportunity",
@@ -201,7 +201,7 @@ var cardsP1 = [
         "Period": "Republican",
         "Image": "Ship",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-3"},
+            {"ID": "Pay amount", "Text": "-2"},
             {"ID": "Influence"},
             {"ID": "Tile before adjacent", "Text": "S", "Optional": ["Shop"]},
             {"ID": "Dedicate tile", "Text": "S", "Optional": ["Shop"]},
@@ -210,7 +210,7 @@ var cardsP1 = [
             {"ID": "Gain amount", "Text": "+1"},
             {"ID": "Production grain"},
         ],
-        "Text": "Pay 3 Influence and dedicate a Shop adjacent to 2 other Shops. Increase your Grain production by 1.",
+        "Text": "Pay 2 Influence and dedicate a Shop adjacent to 2 other Shops. Increase your Grain production by 1.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Wealth"}],
         "Trigger text": "When the card above increases your Wealth, increase your Grain production by 1.",
@@ -222,7 +222,7 @@ var cardsP1 = [
         "Period": "Republican",
         "Image": "Doorway",
         "Icons": [
-            {"ID": "Pay amount", "Text": "-3"},
+            {"ID": "Pay amount", "Text": "-2"},
             {"ID": "Influence"},
             {"ID": "Tile before adjacent", "Text": "D", "Optional": ["Home"]},
             {"ID": "Dedicate tile", "Text": "D", "Optional": ["Home"]},
@@ -231,7 +231,7 @@ var cardsP1 = [
             {"ID": "Gain amount", "Text": "+1"},
             {"ID": "Production wood"},
         ],
-        "Text": "Pay 3 Influence and dedicate a Domus adjacent to 2 other Domus. Increase your Wood production by 1.",
+        "Text": "Pay 2 Influence and dedicate a Domus adjacent to 2 other Domus. Increase your Wood production by 1.",
         "End": "Keep",
         "Trigger icon": [{"ID": "Power"}],
         "Trigger text": "When the card above increases your Power, increase your Wood production by 1.",
@@ -374,7 +374,7 @@ var cardsP1 = [
         "End": "Discard",
         "Benefit icon": [{"ID": "Place tile", "Optional": ["Military"]}],
     },
-    {
+    /*{
         "Name": "People's Temple",
         "Type": "Opportunity",
         "Period": "Republican",
@@ -390,5 +390,5 @@ var cardsP1 = [
         "Text": "Pay 3 Grain and 3 Wood. Build a Temple.",
         "End": "Discard",
         "Benefit icon": [{"ID": "Place tile", "Optional": ["Temple"]}],
-    },
+    },*/
 ]
