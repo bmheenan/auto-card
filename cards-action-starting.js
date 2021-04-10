@@ -22,11 +22,11 @@ var cardsStartingBase = [
             {"ID": "Resource"},
             {"ID": "Arrow"},
             {"ID": "Gain amount", "Text": "1/2/3"},
-            {"ID": "Place tile", "Text": "X"}
+            {"ID": "Place tile", "Optional": "Multi"}
         ],
         "Text": "Do any one of the following:\r - Build a Common building.\r - Pay 2 Influence. Build 2 Common buildings.\r - Pay 5 Influence. Build 3 Common buildings.",
         "End": "Return",
-        "Benefit icon": [{"ID": "Place tile"}],
+        "Benefit icon": [{"ID": "Place tile", "Optional": "Multi"}],
     },
     {
         "Name": "Buy resources",
