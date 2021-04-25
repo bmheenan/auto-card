@@ -1,3 +1,6 @@
+/*
+Kick off the process of making and exporting cards. Must pass in the params object to configure it
+*/
 function automateCards(params) {
     var cardInfo = params["Card info"];
     var cardsRemaining = cardInfo.length;
@@ -41,6 +44,9 @@ function automateCards(params) {
     }
 }
 
+/*
+Copy one or more icons from your "Icons" layer into a given card. 
+*/
 function copyIcons(iconTemplates, root, config, location) {
     var cumOffset = 0;
     var iconPlaceholder = get(root, "Placeholder");
@@ -61,6 +67,9 @@ function copyIcons(iconTemplates, root, config, location) {
     root.translate((location["width"] - cumOffset) / 2, 0);
 }
 
+/*
+Returns a layer or layerset that's a child of `parent`, matching the name specified by `key`
+*/
 function get(parent, key) {
     var layerSets = parent.layerSets;
     for (var i = 0; i < layerSets.length; i++) {
@@ -76,6 +85,9 @@ function get(parent, key) {
     }
 }
 
+/*
+Sets the text of `layer` to the text of `input`
+*/
 function set(input, layer) {
     if (input) {
         layer.textItem.contents = input;
@@ -84,6 +96,9 @@ function set(input, layer) {
     }
 }
 
+/*
+if `expression` is true, then `layer` will be set visible. Otherwise, `layer` will be set invisible.
+*/
 function toggle(expression, layer) {
     if (expression) {
         layer.visible = true;
@@ -95,6 +110,9 @@ function toggle(expression, layer) {
     return expression;
 }
 
+/*
+Within `parent`, it sets all layers whose names are in `NamesOfVisible` to be visible, and all others invisible.
+*/
 function toggleOnly(NamesOfVisible, parent) {
     var listsOfChildren = [parent.layers, parent.layerSets];
     for (var k = 0; i < listsOfChildren.length; k++) {
@@ -113,6 +131,9 @@ function toggleOnly(NamesOfVisible, parent) {
     }
 }
 
+/*
+Internal; don't call directly. This allows you to tune the spacing of specific icons when you call `copyIcons(...)`  
+*/
 function padding(firstItem, secondItem, tight) {
     var noSpacingBefore = {
         "Tile adjacent": true,
@@ -141,6 +162,9 @@ function padding(firstItem, secondItem, tight) {
     }
 }
 
+/*
+Internal; don't call directly. This exports a png image after it's been set up.
+*/
 function exportPng(name) {
     var options = new ExportOptionsSaveForWeb();
     options.format = SaveDocumentType.PNG;
