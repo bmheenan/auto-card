@@ -90,19 +90,19 @@ var tileSummary = [
     },
     {
         "Name": "Oracle",
-        "Background": "Temple",
+        "Background": "Oracle",
         "Repeat": 2,
     },
     {
         "Name": "Barracks",
         "Type": "Military",
-        "Background": "Military",
+        "Background": "Barracks",
         "Repeat": 3,
     },
     {
         "Name": "Parade",
         "Type": "Military",
-        "Background": "Military",
+        "Background": "Parade",
         "Repeat": 3,
     },
 ]

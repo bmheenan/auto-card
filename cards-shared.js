@@ -67,8 +67,8 @@ var cardsShared = [
         "Caption": "Special",
         "Image": "Building",
         "Icons": [
-            {"ID": "Tile owned", "Text": "O", "Optional": ["Temple"]},
-            {"ID": "Tile adjacent", "Text": "R", "Optional": ["Temple"]},
+            {"ID": "Tile owned", "Text": "O", "Optional": ["Oracle"]},
+            {"ID": "Tile adjacent", "Text": "T", "Optional": ["Temple"]},
             {"ID": "Arrow"},
             {"ID": "Multi VP", "Text": "3", "Optional": ["Hexes", "Temple"]},
         ],
