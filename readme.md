@@ -1,5 +1,5 @@
 # How to use auto-card
-auto-card is a utility to help you automate making sheets of cards in photoshop from a template and a json config.
+Autocard (auto-card) is a utility to help you automate making sheets of cards in photoshop from a template and a json config.
 It requires some photoshop skills and some javascript skills.
 
 # Program structure
