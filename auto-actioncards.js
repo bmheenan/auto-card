@@ -10,12 +10,12 @@ go();
 
 function go() {
     var cards = [];
-    for (var i = 0; i < cardsFamily.length; i++) {
+    /*for (var i = 0; i < cardsFamily.length; i++) {
         cards.push(cardsFamily[i])
     }
     for (var i = 0; i < cardsStarting.length; i++) {
         cards.push(cardsStarting[i])
-    }
+    }*/
     for (var i = 0; i < cardsP0.length; i++) {
         cards.push(cardsP0[i])
     }
