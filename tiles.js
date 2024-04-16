@@ -1,147 +1,64 @@
 var tileSummary = [
     {
-        "Name": "Domus",
-        "Background": "Home",
-        "Resource": "Grain",
-        "Costs": [
-            -3,
-            -3,
-            -3,
-            -3,
-            -4,
-            -4,
-            -4,
-            -4,
-            -5,
-            -5,
-            -5,
-            -6,
-            -6,
-            -6,
-            -7,
-            -8,
-            -9,
-        ],
+        "Name": "Peasant home",
+        "Tax": "Rice",
+        "Scores": "Adjacent to Samurai",
+        "Repeat": 6,
     },
     {
-        "Name": "Shop",
-        "Background": "Shop",
-        "Resource": "Wood",
-        "Costs": [
-            -3,
-            -3,
-            -4,
-            -4,
-            -5,
-            -5,
-            -5,
-            -6,
-            -6,
-            -6,
-            -6,
-            -7,
-            -7,
-            -7,
-            -8,
-            -8,
-        ],
+        "Name": "Samurai home",
+        "Tax": "Wood",
+        "Scores": "Adjacent to Merchant",
+        "Repeat": 6,
+    },
+    {
+        "Name": "Merchant shop",
+        "Tax": "Metal",
+        "Scores": "Adjacent to Temple",
+        "Repeat": 6,
     },
     {
         "Name": "Temple",
-        "Background": "Temple",
-        "Resource": "Metal",
-        "Costs": [
-            -4,
-            -5,
-            -5,
-            -6,
-            -6,
-            -6,
-            -7,
-            -7,
-            -7,
-            -8,
-            -8,
-            -9,
-        ],
+        "Tax": "Stone",
+        "Scores": "Adjacent to Peasant",
+        "Repeat": 6,
     },
     {
-        "Name": "Library",
-        "Background": "Civic",
-        "Resource": "Papyrus",
-        "Costs": [
-            -3,
-            -4,
-            -4,
-            -5,
-            -5,
-            -6,
-            -6,
-            -6,
-            -7,
-            -7,
-            -8,
-        ],
+        "Name": "Market",
+        "Tax": "Plus 1",
+        "Repeat": 1,
     },
     {
-        "Name": "Amphitheatre",
-        "Background": "Amphitheatre",
-        "Repeat": 2,
-    },
-    {
-        "Name": "Oracle",
-        "Background": "Oracle",
-        "Repeat": 2,
+        "Name": "Garden",
+        "Scores": "Most",
+        "Repeat": 4,
     },
     {
         "Name": "Barracks",
-        "Type": "Military",
-        "Background": "Barracks",
-        "Repeat": 3,
+        "Repeat": 2,
     },
     {
-        "Name": "Parade",
-        "Type": "Military",
-        "Background": "Parade",
-        "Repeat": 3,
+        "Name": "Arsenal",
+        "Scores": "Per Barracks",
+        "Repeat": 2,
+    },
+    {
+        "Name": "Mountain shrine",
+        "Repeat": 1,
+    },
+    {
+        "Name": "Harvest shrine",
+        "Repeat": 1,
     },
 ]
 
 var tileInfo = [];
 for (var i = 0; i < tileSummary.length; i++) {
-    if (tileSummary[i]["Costs"]) {
-        for (var j = 0; j < tileSummary[i]["Costs"].length; j++) {
-            // Figure out the "next" costs
-            var next = ""
-            if (j + 1 === tileSummary[i]["Costs"].length) {
-                next = "Last";
-            } else {
-                var maxK = j + 3;
-                next = "Next:  "
-                for (var k = j + 1; k < tileSummary[i]["Costs"].length && k <= maxK; k++) {
-                    next = next + tileSummary[i]["Costs"][k];
-                    if (k + 1 < tileSummary[i]["Costs"].length && k + 1 <= maxK) {
-                        next = next + ",  ";
-                    }
-                }
-            }
-            tileInfo.push({
-                "Name": tileSummary[i]["Name"],
-                "Type": tileSummary[i]["Type"],
-                "Background": tileSummary[i]["Background"],
-                "Resource": tileSummary[i]["Resource"],
-                "Cost": tileSummary[i]["Costs"][j],
-                "Next": next,
-                "Order": "#" + (j + 1),
-            });
-        }
-    } else {
-        for (var j = 0; j < tileSummary[i]["Repeat"]; j++) {
-            tileInfo.push({
-                "Name": tileSummary[i]["Name"],
-                "Type": tileSummary[i]["Type"],
-                "Background": tileSummary[i]["Background"],
-            });
-        }
+    for (var j = 0; j < tileSummary[i]["Repeat"]; j++) {
+        tileInfo.push({
+            "Name": tileSummary[i]["Name"],
+            "Tax": tileSummary[i]["Tax"],
+            "Scores": tileSummary[i]["Scores"],
+        });
     }
 }

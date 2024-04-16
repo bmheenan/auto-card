@@ -12,29 +12,16 @@ function go() {
         "Card height": 1000,
         "Card info": tileInfo,
         "Fill function": fillTile,
-        "Unique backs": true,
-        "Back function": fillBack,
+        "Unique backs": false,
     });
 }
 
 function fillTile(config, root) {
     set(config["Name"], get(root, "Name"));
-    if (toggle(config["Type"], get(root, "Type"))) {
-        set(config["Type"], get(root, "Type"));
+    if (toggle(config["Tax"], get(root, "Tax"))) {
+        toggleOnly([config["Tax"]], get(get(root, "Tax"), "Effect"));
     }
-    toggle(false, get(root, "Common cost"));
-    toggle(false, get(root, "Order"));
-    if (toggle(config["Background"], get(root, "Background"))) {
-        toggleOnly([config["Background"]], get(root, "Background"));
-    }
-}
-
-function fillBack(config, root) {
-    if (toggle(config["Cost"], get(root, "Common cost"))) {
-        set(config["Cost"], get(get(root, "Common cost"), "Pay amount"));
-        set(config["Next"], get(get(root, "Common cost"), "Next cost"));
-        toggle(true, get(root, "Order"));
-        set(config["Order"], get(root, "Order"));
-        toggleOnly([config["Resource"]], get(get(root, "Common cost"), "Resource type"));
+    if (toggle(config["Scores"], get(root, "Scoring"))) {
+        toggleOnly([config["Scores"]], get(get(root, "Scoring"), "Scores"));
     }
 }

@@ -136,7 +136,7 @@ function padding(firstItem, secondItem, tight) {
         return 15;
     } else {
         if (!tight) {
-            return 36;
+            return 40;
         } else {
             return 15;
         }
