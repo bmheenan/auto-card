@@ -2,19 +2,19 @@ var tileSummary = [
     {
         "Name": "Peasant home",
         "Tax": "Rice",
-        "Scores": "Adjacent to Samurai",
+        "Scores": "Adjacent to Merchant",
         "Repeat": 6,
     },
     {
         "Name": "Samurai home",
         "Tax": "Wood",
-        "Scores": "Adjacent to Merchant",
+        "Scores": "Adjacent to Temple",
         "Repeat": 6,
     },
     {
         "Name": "Merchant shop",
-        "Tax": "Metal",
-        "Scores": "Adjacent to Temple",
+        "Tax": "Silk",
+        "Scores": "Adjacent to Samurai",
         "Repeat": 6,
     },
     {
