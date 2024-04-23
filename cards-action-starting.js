@@ -9,7 +9,7 @@ var cardsStartingBase = [
         "Name": "Collect taxes",
         "Image": "Tax",
         "Icons": [],
-        "Text": "--------------\rTax a street in Edo. Endow.\r----- OR -----\rRefill taxation spaces. Endow.\r----- OR -----\rPay 2 Rice. Tax 2 streets in Edo. Endow.\r----- OR -----\r----- OR -----\rPay 3 Rice. Refill taxation spaces, then tax a street in Edo.\rEndow.",
+        "Text": "--------------\rTax a street in Edo. Endow.\r----- OR -----\rGain 5 Gold. Refill taxation spaces. Endow.\r----- OR -----\rPay 2 Rice. Tax 2 streets in Edo. Endow.\r----- OR -----\r----- OR -----\rPay 3 Rice. Refill taxation spaces, then tax a street in Edo.\rEndow.",
     },
     /*{
         "Name": "Trade resources",
