@@ -7,14 +7,15 @@ function automateCards(params) {
 
     var iconTemplates = get(activeDocument, "Icons");
     var masterTemplate = get(activeDocument, "Master template");
+    var actionTemplates = get(activeDocument, "Action options");
 
     while (cardsRemaining > 0) {
         var cards = [];
         for (var i = 0; i < params["Rows"]; i++) {
             for (var j = 0; j < params["Columns"]; j++) {
                 if ((i * params["Columns"]) + j < cardsRemaining) {
-                    var card = masterTemplate.duplicate(iconTemplates, ElementPlacement.PLACEBEFORE);
-                    params["Fill function"](cardInfo[currentCard], card, iconTemplates);
+                    var card = masterTemplate.duplicate(actionTemplates, ElementPlacement.PLACEBEFORE);
+                    params["Fill function"](cardInfo[currentCard], card, actionTemplates, iconTemplates);
                     if (!params["Unique backs"]) {
                         card = card.merge();
                     }

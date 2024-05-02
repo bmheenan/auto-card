@@ -1,4 +1,4 @@
-//@include cards-family.js
+//@include cards-clan.js
 //@include cards-action-starting.js
 //@include cards-action-p0.js
 //@include cards-action-p1.js
@@ -10,16 +10,16 @@ go();
 
 function go() {
     var cards = [];
-    for (var i = 0; i < cardsFamily.length; i++) {
+    /*for (var i = 0; i < cardsFamily.length; i++) {
         cards.push(cardsFamily[i])
-    }
+    }*/
     for (var i = 0; i < cardsStarting.length; i++) {
         cards.push(cardsStarting[i])
     }
-    for (var i = 0; i < cardsP0.length; i++) {
+    /*for (var i = 0; i < cardsP0.length; i++) {
         cards.push(cardsP0[i])
     }
-    /*for (var i = 0; i < cardsP1.length; i++) {
+    for (var i = 0; i < cardsP1.length; i++) {
         cards.push(cardsP1[i])
     }
     for (var i = 0; i < cardsP2.length; i++) {
@@ -41,7 +41,7 @@ function go() {
     });
 }
 
-function fillCard(config, root, iconTemplates) {
+function fillCard(config, root, actionTemplates, iconTemplates) {
 
     // Header
     set(config["Name"], get(root, "Name"));
@@ -49,7 +49,7 @@ function fillCard(config, root, iconTemplates) {
     // Type
     toggleOnly([config["Type"]], get(root, "Type"));
     if (config["Type"] === "Starting") {
-        toggleOnly([config["Player"]], get(get(get(root, "Type"), "Starting"), "Player"));
+        toggleOnly([config["Player"]], get(get(root, "Type"), "Starting"));
     }
     if (config["Type"] === "Court") {
         toggleOnly([config["Period"]], get(get(get(root, "Type"), "Court"), "Period"));
@@ -72,15 +72,24 @@ function fillCard(config, root, iconTemplates) {
         });
     }
 
+    // Action options
+    var actionPlaceholder = get(get(root, "Actions"), "Placeholder");
+    var cumOffset = 0;
+    for (var i = 0; i < config["Options"].length; i++) {
+        var conf = config["Options"][i];
+        var action = get(actionTemplates, "Med").duplicate(actionPlaceholder, ElementPlacement.PLACEAFTER);
+        toggle(i === 0, get(get(action, "Order"), "First"));
+        toggle(i !== 0, get(get(action, "Order"), "Or"));
+        set(conf["Text"], get(action, "Text"));
+        copyIcons(iconTemplates, get(action, "Icons"), conf["Icons"], {
+            "x": 20,
+            "y": 792,
+            "width": 960,
+        });
+        toggleOnly([conf["After"]], get(action, "After"));
+        action = action.merge();
+        action.translate(0, cumOffset);
+        cumOffset += (parseInt(action.bounds[3]) - parseInt(action.bounds[1])) + 30;
+    }
 
-    // Immediate, first, icons, text
-    //toggle(config["Order"] === "Immediate", get(get(root, "Order"), "Immediate"));
-    //toggle(config["Order"] === "First", get(get(root, "Order"), "First"));
-    /*copyIcons(iconTemplates, get(root, "Icons"), config["Icons"], {
-        "x": 20,
-        "y": 850,
-        "width": 960,
-        "tight": config["Tight"],
-    });*/
-    set(config["Text"], get(root, "Text"));
 }

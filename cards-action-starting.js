@@ -2,32 +2,146 @@ var cardsStartingBase = [
     {
         "Name": "Hold court",
         "Image": "Hold court",
-        "Icons": [],
-        "Text": "--------------\rGain a Court card. Endow.\r----- OR -----\rPay 1 Silk. Gain 2 Court cards. Endow.\r----- OR -----\rPay 3 Silk. Gain 3 Court cards. Endow.",
+        "Options": [
+            {
+                "Text": "Gain a Court card. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Court card" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Pay 1 Silk. Gain 2 Court cards. Endow.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-1" },
+                    { "ID": "Silk" },
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Court card" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Pay 3 Silk. Gain 3 Court cards. Endow.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Silk" },
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Court card" },
+                ],
+                "After": "Endow",
+            },
+
+        ],
     },
     {
         "Name": "Collect taxes",
         "Image": "Tax",
-        "Icons": [],
-        "Text": "--------------\rTax a street in Edo. Endow.\r----- OR -----\rGain 5 Gold. Refill taxation spaces. Endow.\r----- OR -----\rPay 2 Rice. Tax 2 streets in Edo. Endow.\r----- OR -----\r----- OR -----\rPay 3 Rice. Refill taxation spaces, then tax a street in Edo.\rEndow.",
+        "Options": [
+            {
+                "Text": "Tax a street. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Tax street" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Gain 5 Gold. Refill Taxation spaces. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "5" },
+                    { "ID": "Gold" },
+                    { "ID": "Refill tax" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Pay 2 Rice. Tax 2 streets. Endow.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Rice" },
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Tax street" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Pay 3 Rice. Refill Taxation spaces, then tax a street. Endow.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Rice" },
+                    { "ID": "Arrow" },
+                    { "ID": "Refill tax" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Tax street" },
+                ],
+                "After": "Endow",
+            },
+        ],
     },
-    /*{
-        "Name": "Trade resources",
-        "Image": "Trade resources",
-        "Icons": [],
-        "Text": "--------------\rTake the below actions as many times as you want in any order, then endow:\r     ~~~~~~\r     Increase the price of any resource by 1, then pay\r     that much Gold. Gain 1 of that resource.\r     ~~ or ~~\r     Pay 1 of any resource. Decrease its price by 1,\r     then gain that much Gold.",
-    },*/
     {
         "Name": "Establish your clan",
         "Image": "Move to Edo",
-        "Icons": [],
-        "Text": "--------------\rPay 2 Wood. Build a Peasant home. Discard.\r----- OR -----\rPay 2 Wood. Build a Samurai home. Discard.\r----- OR -----\rPay 2 Stone. Build a Merchant shop. Discard.\r----- OR -----\rPay 2 Stone. Build a Temple. Discard.",
+        "Options": [
+            {
+                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Wood" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Peasant home" },
+                ],
+                "After": "Discard",
+            },
+            {
+                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Wood" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Samurai home" },
+                ],
+                "After": "Discard",
+            },
+            {
+                "Text": "Pay 2 Stone. Build a Merchant shop. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Stone" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Merchant shop" },
+                ],
+                "After": "Discard",
+            },
+            {
+                "Text": "Pay 2 Stone. Build a Temple. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Stone" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Temple" },
+                ],
+                "After": "Discard",
+            },
+        ],
     },
     {
-        "Name": "Finish Generation",
+        "Name": "Pass",
         "Image": "Finish generation",
-        "Icons": [],
-        "Text": "--------------\rEndow, then place Gold on your Endowment equal to the number of players who have not finished the Generation.\r\rTake no more actions this Generation.",
+        "Options": [
+            {
+                "Text": "Endow, then place Gold on your Endowment equal to the number of players who have not yet passed in this Generation.\r\rTake no more actions for the rest of this Generation.",
+                "Icons": [
+                    { "ID": "Pass" },
+                ],
+            },
+        ],
     },
 ];
 
@@ -35,8 +149,8 @@ var cardsStarting = [];
 
 var colors = [
     "Birch",
-    "Cherrywood",
-    /*"Green",
+    /*"Cherrywood",
+    "Green",
     "Purple",
     "Orange",
     "Cyan",*/
