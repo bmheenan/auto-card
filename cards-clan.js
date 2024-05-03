@@ -1,8 +1,8 @@
-var cardsFamily = [
+var cardsClan = [
     {
         "Name": "The Wise Cultivators",
         "Type": "Beginner clan",
-        "Image": "Finish generation",
+        "Image": "Image assets/Farmers.jpeg",
         "Starting resources": [
             { "ID": "Gain amount", "Text": "4" },
             { "ID": "Power" },
@@ -13,13 +13,23 @@ var cardsFamily = [
             { "ID": "Gain amount", "Text": "2" },
             { "ID": "Stone" },
         ],
-        "Icons": [],
-        "Text": "--------------\rPay 2 Wood.\rBuild a Peasant home.\rDiscard.",
+        "Options": [
+            {
+                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Wood" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Peasant home" },
+                ],
+                "After": "Discard",
+            },
+        ],
     },
     {
         "Name": "The Keepers of Tradition",
         "Type": "Beginner clan",
-        "Image": "Samurai 1",
+        "Image": "Image assets/Samurai 2.jpeg",
         "Starting resources": [
             { "ID": "Gain amount", "Text": "2" },
             { "ID": "Power" },
@@ -28,13 +38,23 @@ var cardsFamily = [
             { "ID": "Gain amount", "Text": "3" },
             { "ID": "Silk" },
         ],
-        "Icons": [],
-        "Text": "--------------\rPay 2 Wood.\rBuild a Samurai home.\rDiscard.",
+        "Options": [
+            {
+                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Wood" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Samurai home" },
+                ],
+                "After": "Discard",
+            },
+        ],
     },
     {
-        "Name": "Clan of the Mountains",
+        "Name": "Clan of the Artists",
         "Type": "Beginner clan",
-        "Image": "Temple",
+        "Image": "Image assets/Mountains.jpeg",
         "Starting resources": [
             { "ID": "Gain amount", "Text": "3" },
             { "ID": "Power" },
@@ -45,9 +65,63 @@ var cardsFamily = [
             { "ID": "Gain amount", "Text": "3" },
             { "ID": "Silk" },
         ],
-        "Icons": [],
-        "Text": "--------------\rGain 1 Silk. Endow.\r----- OR -----\rGain 3 Silk.\rDiscard.",
+        "Options": [
+            {
+                "Text": "Gain 1 Silk. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Silk" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Gain 3 Silk. Discard.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Silk" },
+                ],
+                "After": "Discard",
+            },
+        ],
     },
+    {
+        "Name": "The Patrons of Architects",
+        "Type": "Beginner clan",
+        "Image": "Image assets/Building 3.jpeg",
+        "Starting resources": [
+            { "ID": "Gain amount", "Text": "4" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Influence" },
+            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Rice" },
+            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Wood" },
+        ],
+        "Options": [
+            {
+                "Text": "Gain 1 Stone. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Stone" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Gain 3 Stone. Discard.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Stone" },
+                ],
+                "After": "Discard",
+            },
+        ],
+    },
+    /*
     {
         "Name": "The Patrons of Architects",
         "Type": "Beginner clan",
@@ -64,7 +138,7 @@ var cardsFamily = [
         ],
         "Icons": [],
         "Text": "--------------\rGain 1 Stone. Endow.\r----- OR -----\rGain 3 Stone.\rDiscard.",
-    },
+    },*/
     /*{
         "Name": "Sideris family",
         "Type": "Family",

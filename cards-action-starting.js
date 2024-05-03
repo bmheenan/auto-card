@@ -37,15 +37,25 @@ var cardsStartingBase = [
 
         ],
     },
-    /*{
+    {
         "Name": "Collect taxes",
-        "Image": "Tax",
+        "Image": "Image assets/Tax.jpeg",
         "Options": [
             {
                 "Text": "Tax a street. Endow.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Tax street" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Pay 3 Rice. Tax 2 streets. Endow.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Rice" },
+                    { "ID": "Arrow" },
+                    { "ID": "Tax street" },
                     { "ID": "Tax street" },
                 ],
                 "After": "Endow",
@@ -60,18 +70,7 @@ var cardsStartingBase = [
                 ],
                 "After": "Endow",
             },
-            {
-                "Text": "Pay 2 Rice. Tax 2 streets. Endow.",
-                "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
-                    { "ID": "Rice" },
-                    { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "2" },
-                    { "ID": "Tax street" },
-                ],
-                "After": "Endow",
-            },
-            {
+            /*{
                 "Text": "Pay 3 Rice. Refill Taxation spaces, then tax a street. Endow.",
                 "Icons": [
                     { "ID": "Pay amount", "Text": "-3" },
@@ -82,12 +81,12 @@ var cardsStartingBase = [
                     { "ID": "Tax street" },
                 ],
                 "After": "Endow",
-            },
+            },*/
         ],
     },
     {
         "Name": "Establish your clan",
-        "Image": "Move to Edo",
+        "Image": "Image assets/Move to Edo.jpeg",
         "Options": [
             {
                 "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
@@ -133,7 +132,7 @@ var cardsStartingBase = [
     },
     {
         "Name": "Pass",
-        "Image": "Finish generation",
+        "Image": "Image assets/Finish generation.jpeg",
         "Options": [
             {
                 "Text": "Endow. Gain and place Gold on your Endowment equal to the number of players who have not yet passed in this Generation.\r\rTake no more actions for the rest of this Generation.",
@@ -142,15 +141,15 @@ var cardsStartingBase = [
                 ],
             },
         ],
-    },*/
+    },
 ];
 
 var cardsStarting = [];
 
 var colors = [
     "Birch",
-    /*"Cherrywood",
-    "Green",
+    "Cherrywood",
+    /*"Green",
     "Purple",
     "Orange",
     "Cyan",*/

@@ -10,10 +10,10 @@ go();
 
 function go() {
     var cards = [];
-    /*for (var i = 0; i < cardsFamily.length; i++) {
-        cards.push(cardsFamily[i])
-    }*/
-    for (var i = 0; i < cardsStarting.length; i++) {
+    for (var i = 0; i < cardsClan.length; i++) {
+        cards.push(cardsClan[i])
+    }
+    /*for (var i = 0; i < cardsStarting.length; i++) {
         cards.push(cardsStarting[i])
     }
     /*for (var i = 0; i < cardsP0.length; i++) {
@@ -79,7 +79,7 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
     if (toggle(config["Starting resources"], get(root, "Starting resources"))) {
         copyIcons(iconTemplates, get(get(root, "Starting resources"), "Icons"), config["Starting resources"], {
             "x": 20,
-            "y": 680,
+            "y": 655,
             "width": 960,
             "tight": config["Tight"],
         });
@@ -87,7 +87,9 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
 
     // Action options
     var actionPlaceholder = get(get(root, "Actions"), "Placeholder");
-    var cumOffset = 0;
+    var heights = [];
+    var options = [];
+    var padding = 690;
     for (var i = 0; i < config["Options"].length; i++) {
         var conf = config["Options"][i];
         var action = get(actionTemplates, "Med").duplicate(actionPlaceholder, ElementPlacement.PLACEAFTER);
@@ -96,15 +98,28 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
         set(conf["Text"], get(action, "Text"));
         copyIcons(iconTemplates, get(action, "Icons"), conf["Icons"], {
             "x": 20,
-            "y": 792,
+            "y": 775,
             "width": 960,
         });
         if (toggle(conf["After"], get(action, "After"))) {
             toggleOnly([conf["After"]], get(action, "After"));
         }
         action = action.merge();
-        action.translate(0, cumOffset);
-        cumOffset += (parseInt(action.bounds[3]) - parseInt(action.bounds[1])) + 30;
+        options.push(action);
+        heights.push((parseInt(action.bounds[3]) - parseInt(action.bounds[1])));
+        padding -= heights[i];
     }
-
+    numPads = options.length * 2;
+    padding = padding / numPads;
+    var offset = 0;
+    for (var i = 0; i < options.length; i++) {
+        offset += padding;
+        if (i > 0) {
+            var divider = get(actionTemplates, "Divider").duplicate(options[i], ElementPlacement.PLACEBEFORE);
+            divider.translate(0, offset);
+            offset += padding;
+        }
+        options[i].translate(0, offset);
+        offset += heights[i];
+    }
 }
