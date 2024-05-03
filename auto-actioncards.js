@@ -56,11 +56,24 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
     }
 
     // Image
-    if (config["Image"]) {
-        toggleOnly([config["Image"]], get(root, "Flavor image"))
-    } else {
-        toggleOnly(["Warriors"], get(root, "Flavor image"))
-    }
+    var source = activeDocument;
+    template = get(get(root, "Flavor image"), "Placeholder");
+    var imagePath = source.path + "/" + config["Image"];
+    var imgFile = new File(imagePath);
+    var opened = open(imgFile);
+    activeDocument = opened;
+    var image = opened.activeLayer.duplicate(template, ElementPlacement.PLACEBEFORE);
+    opened.close();
+    activeDocument = source;
+
+    image.translate(parseInt(template.bounds[0]), parseInt(template.bounds[1]));
+    var tempWidth = parseInt(template.bounds[2]) - parseInt(template.bounds[0]);
+    var imgWidth = parseInt(image.bounds[2]) - parseInt(image.bounds[0]);
+    var tempHeight = parseInt(template.bounds[3]) - parseInt(template.bounds[1]);
+    var imgHeight = parseInt(image.bounds[3]) - parseInt(image.bounds[1]);
+    factor = Math.max((tempHeight * 100) / imgHeight, (tempWidth * 100) / imgWidth)
+    image.resize(factor, factor, AnchorPosition.TOPLEFT);
+    get(root, "Flavor image").merge();
 
     // Starting resources
     if (toggle(config["Starting resources"], get(root, "Starting resources"))) {
@@ -86,7 +99,9 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
             "y": 792,
             "width": 960,
         });
-        toggleOnly([conf["After"]], get(action, "After"));
+        if (toggle(conf["After"], get(action, "After"))) {
+            toggleOnly([conf["After"]], get(action, "After"));
+        }
         action = action.merge();
         action.translate(0, cumOffset);
         cumOffset += (parseInt(action.bounds[3]) - parseInt(action.bounds[1])) + 30;

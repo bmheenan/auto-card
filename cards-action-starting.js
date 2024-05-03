@@ -1,7 +1,7 @@
 var cardsStartingBase = [
     {
         "Name": "Hold court",
-        "Image": "Hold court",
+        "Image": "Image assets/Hold court.jpeg",
         "Options": [
             {
                 "Text": "Gain a Court card. Endow.",
@@ -37,7 +37,7 @@ var cardsStartingBase = [
 
         ],
     },
-    {
+    /*{
         "Name": "Collect taxes",
         "Image": "Tax",
         "Options": [
@@ -136,13 +136,13 @@ var cardsStartingBase = [
         "Image": "Finish generation",
         "Options": [
             {
-                "Text": "Endow, then place Gold on your Endowment equal to the number of players who have not yet passed in this Generation.\r\rTake no more actions for the rest of this Generation.",
+                "Text": "Endow. Gain and place Gold on your Endowment equal to the number of players who have not yet passed in this Generation.\r\rTake no more actions for the rest of this Generation.",
                 "Icons": [
                     { "ID": "Pass" },
                 ],
             },
         ],
-    },
+    },*/
 ];
 
 var cardsStarting = [];
