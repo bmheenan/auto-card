@@ -16,10 +16,10 @@ function go() {
     /*for (var i = 0; i < cardsStarting.length; i++) {
         cards.push(cardsStarting[i])
     }
-    /*for (var i = 0; i < cardsP0.length; i++) {
+    for (var i = 0; i < cardsP0.length; i++) {
         cards.push(cardsP0[i])
     }
-    for (var i = 0; i < cardsP1.length; i++) {
+    /*for (var i = 0; i < cardsP1.length; i++) {
         cards.push(cardsP1[i])
     }
     for (var i = 0; i < cardsP2.length; i++) {
@@ -43,6 +43,15 @@ function go() {
 
 function fillCard(config, root, actionTemplates, iconTemplates) {
 
+    var iconConfig = {
+        "Padding": {
+            "Gain amount": 20,
+            "Pay amount": 20,
+            "Other players": 20,
+        },
+        "Default padding": 40,
+    };
+
     // Header
     set(config["Name"], get(root, "Name"));
 
@@ -56,70 +65,33 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
     }
 
     // Image
-    var source = activeDocument;
-    template = get(get(root, "Flavor image"), "Placeholder");
-    var imagePath = source.path + "/" + config["Image"];
-    var imgFile = new File(imagePath);
-    var opened = open(imgFile);
-    activeDocument = opened;
-    var image = opened.activeLayer.duplicate(template, ElementPlacement.PLACEBEFORE);
-    opened.close();
-    activeDocument = source;
-
-    image.translate(parseInt(template.bounds[0]), parseInt(template.bounds[1]));
-    var tempWidth = parseInt(template.bounds[2]) - parseInt(template.bounds[0]);
-    var imgWidth = parseInt(image.bounds[2]) - parseInt(image.bounds[0]);
-    var tempHeight = parseInt(template.bounds[3]) - parseInt(template.bounds[1]);
-    var imgHeight = parseInt(image.bounds[3]) - parseInt(image.bounds[1]);
-    factor = Math.max((tempHeight * 100) / imgHeight, (tempWidth * 100) / imgWidth)
-    image.resize(factor, factor, AnchorPosition.TOPLEFT);
+    placeImage(get(get(root, "Flavor image"), "Placeholder"), activeDocument.path + "/" + config["Image"]);
     get(root, "Flavor image").merge();
 
     // Starting resources
     if (toggle(config["Starting resources"], get(root, "Starting resources"))) {
-        copyIcons(iconTemplates, get(get(root, "Starting resources"), "Icons"), config["Starting resources"], {
-            "x": 20,
-            "y": 655,
-            "width": 960,
-            "tight": config["Tight"],
-        });
+        copyIcons(iconTemplates, get(get(root, "Starting resources"), "Icons"), config["Starting resources"], iconConfig);
     }
 
-    // Action options
+    // Actions
     var actionPlaceholder = get(get(root, "Actions"), "Placeholder");
-    var heights = [];
-    var options = [];
-    var padding = 690;
+    var actions = [];
     for (var i = 0; i < config["Options"].length; i++) {
-        var conf = config["Options"][i];
-        var action = get(actionTemplates, "Med").duplicate(actionPlaceholder, ElementPlacement.PLACEAFTER);
+        if (i > 0) {
+            var divider = get(actionTemplates, "Divider").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
+            actions.push(divider);
+        }
+        var action = get(actionTemplates, "Med").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
         toggle(i === 0, get(get(action, "Order"), "First"));
         toggle(i !== 0, get(get(action, "Order"), "Or"));
-        set(conf["Text"], get(action, "Text"));
-        copyIcons(iconTemplates, get(action, "Icons"), conf["Icons"], {
-            "x": 20,
-            "y": 775,
-            "width": 960,
-        });
-        if (toggle(conf["After"], get(action, "After"))) {
-            toggleOnly([conf["After"]], get(action, "After"));
+        set(config["Options"][i]["Text"], get(action, "Text"));
+        copyIcons(iconTemplates, get(action, "Icons"), config["Options"][i]["Icons"], iconConfig);
+        if (toggle(config["Options"][i]["After"], get(action, "After"))) {
+            toggleOnly([config["Options"][i]["After"]], get(action, "After"));
         }
         action = action.merge();
-        options.push(action);
-        heights.push((parseInt(action.bounds[3]) - parseInt(action.bounds[1])));
-        padding -= heights[i];
+        actions.push(action);
     }
-    numPads = options.length * 2;
-    padding = padding / numPads;
-    var offset = 0;
-    for (var i = 0; i < options.length; i++) {
-        offset += padding;
-        if (i > 0) {
-            var divider = get(actionTemplates, "Divider").duplicate(options[i], ElementPlacement.PLACEBEFORE);
-            divider.translate(0, offset);
-            offset += padding;
-        }
-        options[i].translate(0, offset);
-        offset += heights[i];
-    }
+    spaceVertically(actions, actionPlaceholder);
+    actionPlaceholder.remove();
 }

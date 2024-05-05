@@ -121,24 +121,6 @@ var cardsClan = [
             },
         ],
     },
-    /*
-    {
-        "Name": "The Patrons of Architects",
-        "Type": "Beginner clan",
-        "Image": "Temple",
-        "Starting resources": [
-            { "ID": "Gain amount", "Text": "4" },
-            { "ID": "Power" },
-            { "ID": "Gain amount", "Text": "3" },
-            { "ID": "Influence" },
-            { "ID": "Gain amount", "Text": "1" },
-            { "ID": "Rice" },
-            { "ID": "Gain amount", "Text": "3" },
-            { "ID": "Wood" },
-        ],
-        "Icons": [],
-        "Text": "--------------\rGain 1 Stone. Endow.\r----- OR -----\rGain 3 Stone.\rDiscard.",
-    },*/
     /*{
         "Name": "Sideris family",
         "Type": "Family",

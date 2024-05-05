@@ -42,24 +42,53 @@ function automateCards(params) {
     }
 }
 
-function copyIcons(iconTemplates, root, config, location) {
-    var cumOffset = 0;
-    var iconPlaceholder = get(root, "Placeholder");
-    for (var i = 0; i < config.length; i++) {
-        var icon = get(iconTemplates, config[i]["ID"]).duplicate(iconPlaceholder, ElementPlacement.PLACEAFTER);
-        set(config[i]["Text"], get(icon, "Text"));
-        if (toggle(config[i]["Optional"], get(icon, "Optional"))) {
-            toggleOnly(config[i]["Optional"], get(icon, "Optional"));
+function placeImage(placeholder, imagePath) {
+    var source = activeDocument;
+    var imgFile = new File(imagePath);
+    var opened = open(imgFile);
+    activeDocument = opened;
+    var image = opened.activeLayer.duplicate(placeholder, ElementPlacement.PLACEBEFORE);
+    opened.close();
+    activeDocument = source;
+
+    image.translate(parseInt(placeholder.bounds[0]), parseInt(placeholder.bounds[1]));
+    var placeWidth = parseInt(placeholder.bounds[2]) - parseInt(placeholder.bounds[0]);
+    var imgWidth = parseInt(image.bounds[2]) - parseInt(image.bounds[0]);
+    var placeHeight = parseInt(placeholder.bounds[3]) - parseInt(placeholder.bounds[1]);
+    var imgHeight = parseInt(image.bounds[3]) - parseInt(image.bounds[1]);
+    factor = Math.max((placeHeight * 100) / imgHeight, (placeWidth * 100) / imgWidth)
+    image.resize(factor, factor, AnchorPosition.TOPLEFT);
+}
+
+function copyIcons(iconTemplates, container, icons, config) {
+    placeholder = get(container, "Placeholder");
+    var leftEdge = placeholder.bounds[0];
+    var horizCenter = placeholder.bounds[1] + ((placeholder.bounds[3] - placeholder.bounds[1]) / 2);
+    var vertCenter = placeholder.bounds[0] + ((placeholder.bounds[2] - placeholder.bounds[0]) / 2);
+    for (var i = 0; i < icons.length; i++) {
+
+        // Make the icon
+        var icon = get(iconTemplates, icons[i]["ID"]).duplicate(placeholder, ElementPlacement.PLACEBEFORE);
+
+        // Configure its details
+        set(icons[i]["Text"], get(icon, "Text"));
+        if (toggle(icons[i]["Optional"], get(icon, "Optional"))) {
+            toggleOnly(icons[i]["Optional"], get(icon, "Optional"));
         }
+
+        // Move it
         icon = icon.merge();
-        if (i > 0) {
-            cumOffset += padding(config[i - 1], config[i], location["tight"]);
-        }
-        icon.translate(location["x"] + cumOffset, location["y"]);
         var bounds = icon.bounds;
-        cumOffset += (parseInt(bounds[2]) - parseInt(bounds[0]));
+        icon.translate(leftEdge - bounds[0], horizCenter - ((bounds[3] - bounds[1]) / 2) - bounds[1]);
+        var padding = config["Default padding"];
+        if (config["Padding"][icons[i]["ID"]]) {
+            padding = config["Padding"][icons[i]["ID"]];
+        }
+        leftEdge += (parseInt(bounds[2]) - parseInt(bounds[0])) + padding;
     }
-    root.translate((location["width"] - cumOffset) / 2, 0);
+    placeholder.remove();
+    container = container.merge();
+    container.translate(vertCenter - ((container.bounds[2] - container.bounds[0]) / 2) - container.bounds[0], 0);
 }
 
 function get(parent, key) {
@@ -114,34 +143,19 @@ function toggleOnly(NamesOfVisible, parent) {
     }
 }
 
-function padding(firstItem, secondItem, tight) {
-    var noSpacingBefore = {
-        "Tile adjacent": true,
-        "Tile negative": true,
-        "End requirement": true,
+function spaceVertically(layers, placeholder) {
+    var height = parseInt(placeholder.bounds[3]) - parseInt(placeholder.bounds[1]);
+    for (var i = 0; i < layers.length; i++) {
+        height -= (parseInt(layers[i].bounds[3]) - parseInt(layers[i].bounds[1]));
     }
-    var lowSpacingAfter = {
-        "Pay amount": true,
-        "Gain amount": true,
-        "Neutral amount": true,
-    }
-    var noSpacingAfter = {
-        "Tile before adjacent": true,
-        "Start requirement": true,
-    }
-    if (noSpacingBefore[secondItem["ID"]]) {
-        return 5;
-    } else if (noSpacingAfter[firstItem["ID"]]) {
-        return 5;
-    } else if (lowSpacingAfter[firstItem["ID"]]) {
-        return 15;
-    } else {
-        if (!tight) {
-            return 40;
-        } else {
-            return 15;
+    var padding = height / (layers.length + 1);
+    var offset = parseInt(placeholder.bounds[1]);
+    for (var i = 0; i < layers.length; i++) {
+        offset += padding;
+        if (i > 0) {
+            offset += (parseInt(layers[i - 1].bounds[3]) - parseInt(layers[i - 1].bounds[1]))
         }
-
+        layers[i].translate(0, offset - parseInt(layers[i].bounds[1]));
     }
 }
 
