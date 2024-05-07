@@ -13,7 +13,7 @@ function go() {
     for (var i = 0; i < cardsClan.length; i++) {
         cards.push(cardsClan[i])
     }
-    /*for (var i = 0; i < cardsStarting.length; i++) {
+    for (var i = 0; i < cardsStarting.length; i++) {
         cards.push(cardsStarting[i])
     }
     for (var i = 0; i < cardsP0.length; i++) {
@@ -48,6 +48,8 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
             "Gain amount": 20,
             "Pay amount": 20,
             "Other players": 20,
+            "Lowest player": 20,
+            "Dedicate adjacent tile": 0,
         },
         "Default padding": 40,
     };
@@ -81,16 +83,20 @@ function fillCard(config, root, actionTemplates, iconTemplates) {
             var divider = get(actionTemplates, "Divider").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
             actions.push(divider);
         }
-        var action = get(actionTemplates, "Med").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
+        var action = get(actionTemplates, "Icons").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
         toggle(i === 0, get(get(action, "Order"), "First"));
         toggle(i !== 0, get(get(action, "Order"), "Or"));
-        set(config["Options"][i]["Text"], get(action, "Text"));
         copyIcons(iconTemplates, get(action, "Icons"), config["Options"][i]["Icons"], iconConfig);
         if (toggle(config["Options"][i]["After"], get(action, "After"))) {
             toggleOnly([config["Options"][i]["After"]], get(action, "After"));
         }
         action = action.merge();
         actions.push(action);
+
+        var text = get(actionTemplates, "Text").duplicate(actionPlaceholder, ElementPlacement.PLACEBEFORE);
+        set(config["Options"][i]["Text"], get(text, "Text"));
+        text = text.merge();
+        actions.push(text);
     }
     spaceVertically(actions, actionPlaceholder);
     actionPlaceholder.remove();

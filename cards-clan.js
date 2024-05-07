@@ -8,10 +8,8 @@ var cardsClan = [
             { "ID": "Power" },
             { "ID": "Gain amount", "Text": "2" },
             { "ID": "Influence" },
-            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Gain amount", "Text": "3" },
             { "ID": "Rice" },
-            { "ID": "Gain amount", "Text": "2" },
-            { "ID": "Stone" },
         ],
         "Options": [
             {
@@ -98,7 +96,7 @@ var cardsClan = [
             { "ID": "Gain amount", "Text": "1" },
             { "ID": "Rice" },
             { "ID": "Gain amount", "Text": "3" },
-            { "ID": "Wood" },
+            { "ID": "Stone" },
         ],
         "Options": [
             {

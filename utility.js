@@ -81,7 +81,7 @@ function copyIcons(iconTemplates, container, icons, config) {
         var bounds = icon.bounds;
         icon.translate(leftEdge - bounds[0], horizCenter - ((bounds[3] - bounds[1]) / 2) - bounds[1]);
         var padding = config["Default padding"];
-        if (config["Padding"][icons[i]["ID"]]) {
+        if ("Padding" in config && icons[i]["ID"] in config["Padding"]) {
             padding = config["Padding"][icons[i]["ID"]];
         }
         leftEdge += (parseInt(bounds[2]) - parseInt(bounds[0])) + padding;

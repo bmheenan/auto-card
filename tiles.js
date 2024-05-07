@@ -2,44 +2,53 @@ var tileSummary = [
     {
         "Name": "Peasant home",
         "Tax": "Rice",
-        "Scores": "Adjacent to Merchant",
-        "Repeat": 6,
+        "Scores": [
+            { "ID": "Text", "Text": "1x" },
+            { "ID": "Adjacent" },
+            { "ID": "Merchant shop" },
+        ],
+        "Repeat": 7,
     },
     {
         "Name": "Samurai home",
         "Tax": "Wood",
-        "Scores": "Adjacent to Temple",
-        "Repeat": 6,
+        "Scores": [
+            { "ID": "Text", "Text": "1x" },
+            { "ID": "Adjacent" },
+            { "ID": "Temple" },
+        ],
+        "Repeat": 7,
     },
     {
         "Name": "Merchant shop",
         "Tax": "Silk",
-        "Scores": "Adjacent to Samurai",
+        "Scores": [
+            { "ID": "Text", "Text": "1x" },
+            { "ID": "Adjacent" },
+            { "ID": "Samurai home" },
+        ],
         "Repeat": 6,
     },
     {
         "Name": "Temple",
         "Tax": "Stone",
-        "Scores": "Adjacent to Peasant",
+        "Scores": [
+            { "ID": "Text", "Text": "1x" },
+            { "ID": "Adjacent" },
+            { "ID": "Peasant home" },
+        ],
         "Repeat": 6,
     },
     {
         "Name": "Market",
-        "Tax": "Plus 1",
-        "Repeat": 1,
-    },
-    {
-        "Name": "Garden",
-        "Scores": "Most",
+        "Tax": "+1",
         "Repeat": 4,
     },
     {
-        "Name": "Barracks",
-        "Repeat": 2,
-    },
-    {
-        "Name": "Arsenal",
-        "Scores": "Per Barracks",
+        "Name": "Garden",
+        "Scores": [
+            { "ID": "Text", "Text": "5 for most" },
+        ],
         "Repeat": 2,
     },
     {
