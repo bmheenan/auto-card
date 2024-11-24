@@ -50,9 +50,9 @@ var cardsStartingBase = [
                 "After": "Endow",
             },
             {
-                "Text": "Pay 3 Rice. Tax 2 streets. Endow.",
+                "Text": "Pay 2 Rice. Tax 2 streets. Endow.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Rice" },
                     { "ID": "Arrow" },
                     { "ID": "Tax street" },
@@ -61,10 +61,10 @@ var cardsStartingBase = [
                 "After": "Endow",
             },
             {
-                "Text": "Gain 5 Gold. Refill Taxation spaces. Endow.",
+                "Text": "Gain 3 Gold. Refill Taxation spaces. Endow.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "5" },
+                    { "ID": "Gain amount", "Text": "3" },
                     { "ID": "Gold" },
                     { "ID": "Refill tax" },
                 ],
@@ -89,9 +89,9 @@ var cardsStartingBase = [
         "Image": "Image assets/Move to Edo.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Text": "Pay 1 Wood. Build a Peasant home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Peasant home"] },
@@ -99,9 +99,9 @@ var cardsStartingBase = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Text": "Pay 1 Wood. Build a Samurai home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Samurai home"] },
@@ -109,9 +109,9 @@ var cardsStartingBase = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Stone. Build a Merchant shop. Discard.",
+                "Text": "Pay 1 Stone. Build a Merchant shop. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Merchant shop"] },
@@ -119,9 +119,9 @@ var cardsStartingBase = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Stone. Build a Temple. Discard.",
+                "Text": "Pay 1 Stone. Build a Temple. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Temple"] },

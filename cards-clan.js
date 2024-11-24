@@ -4,18 +4,18 @@ var cardsClan = [
         "Type": "Beginner clan",
         "Image": "Image assets/Farmers.jpeg",
         "Starting resources": [
-            { "ID": "Gain amount", "Text": "4" },
+            { "ID": "Gain amount", "Text": "2" },
             { "ID": "Power" },
             { "ID": "Gain amount", "Text": "2" },
             { "ID": "Influence" },
-            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Gain amount", "Text": "2" },
             { "ID": "Rice" },
         ],
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Text": "Pay 1 Wood. Build a Peasant home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": "Peasant home" },
@@ -31,19 +31,135 @@ var cardsClan = [
         "Starting resources": [
             { "ID": "Gain amount", "Text": "2" },
             { "ID": "Power" },
-            { "ID": "Gain amount", "Text": "4" },
+            { "ID": "Gain amount", "Text": "2" },
             { "ID": "Influence" },
-            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Stone" },
+        ],
+        "Options": [
+            {
+                "Text": "Pay 1 Wood. Build a Samurai home. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-1" },
+                    { "ID": "Wood" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Samurai home" },
+                ],
+                "After": "Discard",
+            },
+        ],
+    },
+    {
+        "Name": "The Pious",
+        "Type": "Beginner clan",
+        "Image": "Image assets/Temple in the forest.jpeg",
+        "Starting resources": [
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Influence" },
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Wood" },
+        ],
+        "Options": [
+            {
+                "Text": "Pay 1 Stone. Build a Temple. Discard.",
+                "Icons": [
+                    { "ID": "Pay amount", "Text": "-1" },
+                    { "ID": "Stone" },
+                    { "ID": "Arrow" },
+                    { "ID": "Place tile", "Optional": "Temple" },
+                ],
+                "After": "Discard",
+            },
+        ],
+    },
+    {
+        "Name": "The Great Traders",
+        "Type": "Beginner clan",
+        "Image": "Image assets/Trade resources.jpeg",
+        "Starting resources": [
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "2" },
+            { "ID": "Influence" },
+            { "ID": "Gain amount", "Text": "2" },
             { "ID": "Silk" },
         ],
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Text": "Pay 1 Stone. Build a Merchant shop. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
-                    { "ID": "Wood" },
+                    { "ID": "Pay amount", "Text": "-1" },
+                    { "ID": "Stone" },
                     { "ID": "Arrow" },
-                    { "ID": "Place tile", "Optional": "Samurai home" },
+                    { "ID": "Place tile", "Optional": "Merchant shop" },
+                ],
+                "After": "Discard",
+            },
+        ],
+    },
+    {
+        "Name": "The Landholders",
+        "Type": "Beginner clan",
+        "Image": "Image assets/Land.jpeg",
+        "Starting resources": [
+            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Influence" },
+            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Rice" },
+        ],
+        "Options": [
+            {
+                "Text": "Gain 1 Rice. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Rice" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Gain 3 Rice. Discard.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Rice" },
+                ],
+                "After": "Discard",
+            },
+        ],
+    },
+    {
+        "Name": "The Crafters",
+        "Type": "Beginner clan",
+        "Image": "Image assets/Woodworking.jpeg",
+        "Starting resources": [
+            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Influence" },
+            { "ID": "Gain amount", "Text": "1" },
+            { "ID": "Wood" },
+        ],
+        "Options": [
+            {
+                "Text": "Gain 1 Wood. Endow.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "1" },
+                    { "ID": "Wood" },
+                ],
+                "After": "Endow",
+            },
+            {
+                "Text": "Gain 3 Wood. Discard.",
+                "Icons": [
+                    { "ID": "Arrow" },
+                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Wood" },
                 ],
                 "After": "Discard",
             },
@@ -56,11 +172,9 @@ var cardsClan = [
         "Starting resources": [
             { "ID": "Gain amount", "Text": "3" },
             { "ID": "Power" },
-            { "ID": "Gain amount", "Text": "4" },
+            { "ID": "Gain amount", "Text": "1" },
             { "ID": "Influence" },
             { "ID": "Gain amount", "Text": "1" },
-            { "ID": "Wood" },
-            { "ID": "Gain amount", "Text": "3" },
             { "ID": "Silk" },
         ],
         "Options": [
@@ -89,13 +203,11 @@ var cardsClan = [
         "Type": "Beginner clan",
         "Image": "Image assets/Building 3.jpeg",
         "Starting resources": [
-            { "ID": "Gain amount", "Text": "4" },
-            { "ID": "Power" },
             { "ID": "Gain amount", "Text": "3" },
+            { "ID": "Power" },
+            { "ID": "Gain amount", "Text": "1" },
             { "ID": "Influence" },
             { "ID": "Gain amount", "Text": "1" },
-            { "ID": "Rice" },
-            { "ID": "Gain amount", "Text": "3" },
             { "ID": "Stone" },
         ],
         "Options": [

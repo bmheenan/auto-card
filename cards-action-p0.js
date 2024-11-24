@@ -6,10 +6,10 @@ var cardsP0 = [
         "Image": "Image assets/Rice.jpeg",
         "Options": [
             {
-                "Text": "Gain 2 Rice. All other players gain 1 Rice. Discard.",
+                "Text": "Gain 3 Rice. All other players gain 1 Rice. Discard.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Gain amount", "Text": "3" },
                     { "ID": "Rice" },
                     { "ID": "Other players" },
                     { "ID": "Gain amount", "Text": "1" },
@@ -26,10 +26,10 @@ var cardsP0 = [
         "Image": "Image assets/Forest.jpeg",
         "Options": [
             {
-                "Text": "Gain 2 Wood. All other players gain 1 Wood. Discard.",
+                "Text": "Gain 3 Wood. All other players gain 1 Wood. Discard.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Gain amount", "Text": "3" },
                     { "ID": "Wood" },
                     { "ID": "Other players" },
                     { "ID": "Gain amount", "Text": "1" },
@@ -46,10 +46,10 @@ var cardsP0 = [
         "Image": "Image assets/Kimono.jpeg",
         "Options": [
             {
-                "Text": "Gain 2 Silk. All other players gain 1 Silk. Discard.",
+                "Text": "Gain 3 Silk. All other players gain 1 Silk. Discard.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Gain amount", "Text": "3" },
                     { "ID": "Silk" },
                     { "ID": "Other players" },
                     { "ID": "Gain amount", "Text": "1" },
@@ -66,10 +66,10 @@ var cardsP0 = [
         "Image": "Image assets/Quarry.jpeg",
         "Options": [
             {
-                "Text": "Gain 2 Stone. All other players gain 1 Stone. Discard.",
+                "Text": "Gain 3 Stone. All other players gain 1 Stone. Discard.",
                 "Icons": [
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "2" },
+                    { "ID": "Gain amount", "Text": "3" },
                     { "ID": "Stone" },
                     { "ID": "Other players" },
                     { "ID": "Gain amount", "Text": "1" },
@@ -86,9 +86,9 @@ var cardsP0 = [
         "Image": "Image assets/Farmers house.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Text": "Pay 1 Wood. Build a Peasant home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Peasant home"] },
@@ -96,11 +96,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Wood. Build 2 Peasant homes. Discard.",
+                "Text": "Pay 1 Rice and 2 Wood. Build 2 Peasant homes. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Peasant home"] },
@@ -117,9 +117,9 @@ var cardsP0 = [
         "Image": "Image assets/Farmers house.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Peasant home. Discard.",
+                "Text": "Pay 1 Wood. Build a Peasant home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Peasant home"] },
@@ -127,11 +127,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Wood. Build 2 Peasant homes. Discard.",
+                "Text": "Pay 1 Rice and 2 Wood. Build 2 Peasant homes. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Peasant home"] },
@@ -148,9 +148,9 @@ var cardsP0 = [
         "Image": "Image assets/Samurai house.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Text": "Pay 1 Wood. Build a Samurai home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Samurai home"] },
@@ -158,11 +158,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Wood. Build 2 Samurai homes. Discard.",
+                "Text": "Pay 1 Rice and 2 Wood. Build 2 Samurai homes. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Samurai home"] },
@@ -179,9 +179,9 @@ var cardsP0 = [
         "Image": "Image assets/Samurai house.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Wood. Build a Samurai home. Discard.",
+                "Text": "Pay 1 Wood. Build a Samurai home. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Samurai home"] },
@@ -189,11 +189,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Wood. Build 2 Samurai homes. Discard.",
+                "Text": "Pay 1 Rice and 2 Wood. Build 2 Samurai homes. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Wood" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Samurai home"] },
@@ -210,9 +210,9 @@ var cardsP0 = [
         "Image": "Image assets/Silks.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Stone. Build a Merchant shop. Discard.",
+                "Text": "Pay 1 Stone. Build a Merchant shop. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Merchant shop"] },
@@ -220,11 +220,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Stone. Build 2 Merchant shops. Discard.",
+                "Text": "Pay 1 Rice and 2 Stone. Build 2 Merchant shops. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Merchant shop"] },
@@ -241,9 +241,9 @@ var cardsP0 = [
         "Image": "Image assets/Silks.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Stone. Build a Merchant shop. Discard.",
+                "Text": "Pay 1 Stone. Build a Merchant shop. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Merchant shop"] },
@@ -251,11 +251,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Stone. Build 2 Merchant shops. Discard.",
+                "Text": "Pay 1 Rice and 2 Stone. Build 2 Merchant shops. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Merchant shop"] },
@@ -272,9 +272,9 @@ var cardsP0 = [
         "Image": "Image assets/Temple.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Stone. Build a Temple. Discard.",
+                "Text": "Pay 1 Stone. Build a Temple. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Temple"] },
@@ -282,11 +282,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Stone. Build 2 Temples. Discard.",
+                "Text": "Pay 1 Rice and 2 Stone. Build 2 Temples. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Temple"] },
@@ -303,9 +303,9 @@ var cardsP0 = [
         "Image": "Image assets/Temple.jpeg",
         "Options": [
             {
-                "Text": "Pay 2 Stone. Build a Temple. Discard.",
+                "Text": "Pay 1 Stone. Build a Temple. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Temple"] },
@@ -313,11 +313,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 2 Rice and 4 Stone. Build 2 Temples. Discard.",
+                "Text": "Pay 1 Rice and 2 Stone. Build 2 Temples. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-4" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Stone" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Temple"] },
@@ -334,9 +334,9 @@ var cardsP0 = [
         "Image": "Image assets/Market.jpeg",
         "Options": [
             {
-                "Text": "Pay 3 Rice. Build a Market. Discard.",
+                "Text": "Pay 2 Rice. Build a Market. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Rice" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Market"] },
@@ -344,11 +344,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 6 Rice and 2 Silk. Build 2 Markets. Discard.",
+                "Text": "Pay 4 Rice and 1 Silk. Build 2 Markets. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-6" },
+                    { "ID": "Pay amount", "Text": "-4" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Silk" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Market"] },
@@ -365,9 +365,9 @@ var cardsP0 = [
         "Image": "Image assets/Market.jpeg",
         "Options": [
             {
-                "Text": "Pay 3 Rice. Build a Market. Discard.",
+                "Text": "Pay 2 Rice. Build a Market. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-3" },
+                    { "ID": "Pay amount", "Text": "-2" },
                     { "ID": "Rice" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Market"] },
@@ -375,11 +375,11 @@ var cardsP0 = [
                 "After": "Discard",
             },
             {
-                "Text": "Pay 6 Rice and 2 Silk. Build 2 Markets. Discard.",
+                "Text": "Pay 4 Rice and 1 Silk. Build 2 Markets. Discard.",
                 "Icons": [
-                    { "ID": "Pay amount", "Text": "-6" },
+                    { "ID": "Pay amount", "Text": "-4" },
                     { "ID": "Rice" },
-                    { "ID": "Pay amount", "Text": "-2" },
+                    { "ID": "Pay amount", "Text": "-1" },
                     { "ID": "Silk" },
                     { "ID": "Arrow" },
                     { "ID": "Place tile", "Optional": ["Market"] },
@@ -450,11 +450,11 @@ var cardsP0 = [
                 "After": "Endow",
             },
             {
-                "Text": "With the Mountain Shrine: Gain 3 Silk. Discard.",
+                "Text": "With the Mountain Shrine: Gain 2 Silk. Discard.",
                 "Icons": [
                     { "ID": "With tile", "Optional": ["Mountain shrine"] },
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Gain amount", "Text": "2" },
                     { "ID": "Silk" },
                 ],
                 "After": "Discard",
@@ -489,11 +489,11 @@ var cardsP0 = [
                 "After": "Endow",
             },
             {
-                "Text": "With the Mountain Shrine: Gain 3 Stone. Discard.",
+                "Text": "With the Mountain Shrine: Gain 2 Stone. Discard.",
                 "Icons": [
                     { "ID": "With tile", "Optional": ["Mountain shrine"] },
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Gain amount", "Text": "2" },
                     { "ID": "Stone" },
                 ],
                 "After": "Discard",
@@ -560,11 +560,11 @@ var cardsP0 = [
                 "After": "Endow",
             },
             {
-                "Text": "With the Harvest Shrine: Gain 3 Rice. Discard.",
+                "Text": "With the Harvest Shrine: Gain 2 Rice. Discard.",
                 "Icons": [
                     { "ID": "With tile", "Optional": ["Harvest shrine"] },
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Gain amount", "Text": "2" },
                     { "ID": "Rice" },
                 ],
                 "After": "Discard",
@@ -599,11 +599,11 @@ var cardsP0 = [
                 "After": "Endow",
             },
             {
-                "Text": "With the Harvest Shrine: Gain 3 Wood. Discard.",
+                "Text": "With the Harvest Shrine: Gain 2 Wood. Discard.",
                 "Icons": [
                     { "ID": "With tile", "Optional": ["Harvest shrine"] },
                     { "ID": "Arrow" },
-                    { "ID": "Gain amount", "Text": "3" },
+                    { "ID": "Gain amount", "Text": "2" },
                     { "ID": "Wood" },
                 ],
                 "After": "Discard",
