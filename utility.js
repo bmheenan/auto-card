@@ -75,13 +75,13 @@ function get(parent, key) {
     for (var i = 0; i < layerSets.length; i++) {
         if (layerSets[i].name.substring(0, key.length) === key) {
             return layerSets[i];
-        } 
+        }
     }
     var layers = parent.layers;
     for (var i = 0; i < layers.length; i++) {
         if (layers[i].name.substring(0, key.length) === key) {
             return layers[i];
-        } 
+        }
     }
 }
 
@@ -105,7 +105,7 @@ function toggle(expression, layer) {
     } else {
         try {
             layer.visible = false;
-        } catch(e) { }
+        } catch (e) { }
     }
     return expression;
 }
@@ -158,7 +158,7 @@ function padding(firstItem, secondItem, tight) {
         } else {
             return 24;
         }
-        
+
     }
 }
 
