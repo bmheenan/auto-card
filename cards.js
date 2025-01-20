@@ -1,13 +1,33 @@
 var cards_summary = [
     {
         "Type": "Loyal crew",
+        "Player count": "2+",
+        "Repeat": 2,
+    },
+    {
+        "Type": "Betrayer",
+        "Player count": "2+",
+        "Repeat": 2,
+    },
+    {
+        "Type": "Loyal crew",
+        "Player count": "3+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Betrayer",
+        "Player count": "3+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Loyal crew",
         "Player count": "4+",
-        "Repeat": 4,
+        "Repeat": 1,
     },
     {
         "Type": "Betrayer",
         "Player count": "4+",
-        "Repeat": 4,
+        "Repeat": 1,
     },
     {
         "Type": "Loyal crew",
@@ -52,26 +72,74 @@ var cards_summary = [
 
     {
         "Type": "Peril",
-        "Player count": "4+",
-        "Repeat": 20,
+        "Player count": "2+",
+        "Repeat": 11,
     },
     {
         "Type": "Plunder",
         "Value": 1,
-        "Player count": "4+",
-        "Repeat": 5,
+        "Player count": "2+",
+        "Repeat": 3,
     },
     {
         "Type": "Plunder",
         "Value": 2,
+        "Player count": "2+",
+        "Repeat": 2,
+    },
+    {
+        "Type": "Plunder",
+        "Value": 3,
+        "Player count": "2+",
+        "Repeat": 2,
+    },
+
+    {
+        "Type": "Peril",
+        "Player count": "3+",
+        "Repeat": 5,
+    },
+    {
+        "Type": "Plunder",
+        "Value": 1,
+        "Player count": "3+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Plunder",
+        "Value": 2,
+        "Player count": "3+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Plunder",
+        "Value": 3,
+        "Player count": "3+",
+        "Repeat": 0,
+    },
+
+    {
+        "Type": "Peril",
         "Player count": "4+",
         "Repeat": 4,
     },
     {
         "Type": "Plunder",
+        "Value": 1,
+        "Player count": "4+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Plunder",
+        "Value": 2,
+        "Player count": "4+",
+        "Repeat": 1,
+    },
+    {
+        "Type": "Plunder",
         "Value": 3,
         "Player count": "4+",
-        "Repeat": 3,
+        "Repeat": 1,
     },
 
     {
