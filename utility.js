@@ -57,14 +57,32 @@ function copyIcons(iconTemplates, root, config, location) {
             toggleOnly(config[i]["Optional"], get(icon, "Optional"));
         }
         icon = icon.merge();
+        var bounds = icon.bounds;
+        var iconWidth = parseInt(bounds[2]) - parseInt(bounds[0]);
+        var iconHeight = parseInt(bounds[3]) - parseInt(bounds[1]);
         if (i > 0) {
             cumOffset += padding(config[i - 1], config[i], location["tight"]);
         }
-        icon.translate(location["x"] + cumOffset, location["y"]);
-        var bounds = icon.bounds;
-        cumOffset += (parseInt(bounds[2]) - parseInt(bounds[0]));
+        if (location["vertical"]) {
+            icon.translate(location["x"] - (iconWidth / 2), location["y"] + cumOffset);
+        } else {
+            icon.translate(location["x"] + cumOffset, location["y"] - (iconHeight / 2));
+        }
+        if (location["vertical"]) {
+            cumOffset += iconHeight;
+        } else {
+            cumOffset += iconWidth;
+        }
     }
-    root.translate((location["width"] - cumOffset) / 2, 0);
+    root = root.merge();
+    var bounds = root.bounds;
+    var allIconsWidth = parseInt(bounds[2]) - parseInt(bounds[0]);
+    var allIconsHeight = parseInt(bounds[3]) - parseInt(bounds[1]);
+    if (location["vertical"] && location["center"]) {
+        root.translate(0, allIconsHeight / -2);
+    } else if (location["center"]) {
+        root.translate(allIconsWidth / -2, 0);
+    }
 }
 
 /*
@@ -83,6 +101,17 @@ function get(parent, key) {
             return layers[i];
         }
     }
+}
+
+/*
+Returns a layer or layerset that's a decendent of `parent`, matching the path spcified by the array `keys`
+*/
+function getPath(parent, keys) {
+    var result = parent;
+    for (var i = 0; i < keys.length; i++) {
+        result = get(result, keys[i]);
+    }
+    return result;
 }
 
 /*
