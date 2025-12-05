@@ -1,11 +1,11 @@
 var cards_summary = [
     // 2 players
-    {
+    /*{
         "Type": "Sail",
         "Player count": "2+",
         "Title": "Peril",
         "Rank Start": 1,
-        "Repeat": 17,
+        "Repeat": 15,
         "Icons": [
             { "ID": "Skull" },
         ]
@@ -14,8 +14,8 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "2+",
         "Title": "Plunder",
-        "Rank Start": 56,
-        "Repeat": 5,
+        "Rank Start": 51,
+        "Repeat": 7,
         "Icons": [
             { "ID": "Swords" },
         ]
@@ -57,7 +57,7 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "3+",
         "Title": "Peril",
-        "Rank Start": 18,
+        "Rank Start": 16,
         "Repeat": 9,
         "Icons": [
             { "ID": "Skull" },
@@ -67,7 +67,7 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "3+",
         "Title": "Plunder",
-        "Rank Start": 61,
+        "Rank Start": 58,
         "Repeat": 1,
         "Icons": [
             { "ID": "Swords" },
@@ -89,7 +89,7 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "4+",
         "Title": "Peril",
-        "Rank Start": 27,
+        "Rank Start": 25,
         "Repeat": 3,
         "Icons": [
             { "ID": "Skull" },
@@ -99,7 +99,7 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "4+",
         "Title": "Plunder",
-        "Rank Start": 62,
+        "Rank Start": 59,
         "Repeat": 3,
         "Icons": [
             { "ID": "Swords" },
@@ -142,8 +142,8 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "5+",
         "Title": "Peril",
-        "Rank Start": 30,
-        "Repeat": 10,
+        "Rank Start": 28,
+        "Repeat": 9,
         "Icons": [
             { "ID": "Skull" },
         ]
@@ -152,31 +152,163 @@ var cards_summary = [
         "Type": "Sail",
         "Player count": "5+",
         "Title": "Plunder",
-        "Rank Start": 78,
+        "Rank Start": 62,
+        "Repeat": 1,
+        "Icons": [
+            { "ID": "Swords" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "5+",
+        "Title": "Plunder",
+        "Rank Start": 76,
         "Repeat": 1,
         "Icons": [
             { "ID": "Rum" },
         ]
     },
     // 6 players
-
+    {
+        "Type": "Sail",
+        "Player count": "6+",
+        "Title": "Peril",
+        "Rank Start": 37,
+        "Repeat": 2,
+        "Icons": [
+            { "ID": "Skull" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "6+",
+        "Title": "Plunder",
+        "Rank Start": 63,
+        "Repeat": 5,
+        "Icons": [
+            { "ID": "Swords" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "6+",
+        "Title": "Plunder",
+        "Rank Start": 79,
+        "Repeat": 2,
+        "Icons": [
+            { "ID": "Rum" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "6+",
+        "Title": "Plunder",
+        "Rank Start": 92,
+        "Repeat": 2,
+        "Icons": [
+            { "ID": "Coin" },
+            { "ID": "Coin" },
+        ]
+    },
+    // 7 players
+    {
+        "Type": "Sail",
+        "Player count": "7+",
+        "Title": "Peril",
+        "Rank Start": 39,
+        "Repeat": 11,
+        "Icons": [
+            { "ID": "Skull" },
+        ]
+    },
+    // 8 players
+    {
+        "Type": "Sail",
+        "Player count": "8+",
+        "Title": "Peril",
+        "Rank Start": 50,
+        "Repeat": 1,
+        "Icons": [
+            { "ID": "Skull" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "8+",
+        "Title": "Plunder",
+        "Rank Start": 68,
+        "Repeat": 4,
+        "Icons": [
+            { "ID": "Swords" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "8+",
+        "Title": "Plunder",
+        "Rank Start": 81,
+        "Repeat": 2,
+        "Icons": [
+            { "ID": "Rum" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "8+",
+        "Title": "Plunder",
+        "Rank Start": 86,
+        "Repeat": 1,
+        "Icons": [
+            { "ID": "Rum" },
+            { "ID": "Rum" },
+        ]
+    },
+    {
+        "Type": "Sail",
+        "Player count": "8+",
+        "Title": "Plunder",
+        "Rank Start": 94,
+        "Repeat": 3,
+        "Icons": [
+            { "ID": "Coin" },
+            { "ID": "Coin" },
+        ]
+    },
     // Non sail
     {
         "Type": "Accused",
-        "Repeat": 4,
+        "Repeat": 7,
     },
     {
         "Type": "Reputation",
-        "Repeat": 14,
+        "Repeat": 21,
     },
     {
         "Type": "Loyal crew",
-        "Repeat": 3,
+        "Repeat": 8,
     },
     {
         "Type": "Betrayer",
-        "Repeat": 3,
+        "Repeat": 8,
     },
+    // Backs
+    {
+        "Type": "Accused",
+        "Repeat": 7,
+    },
+    {
+        "Type": "Reputation",
+        "Repeat": 21,
+    },*/
+    {
+        "Type": "Reputation",
+        "Repeat": 42,
+    },
+    {
+        "Type": "Scoring",
+        "Repeat": 16,
+    },
+
 ];
 
 var cards = [];

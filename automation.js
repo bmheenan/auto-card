@@ -24,7 +24,7 @@ function fillCard(config, root, iconTemplates) {
         set(config["Rank"], getPath(root, ["Card type", "Sail", "Rank", "Amount"]));
         toggleOnly([config["Title"]], getPath(root, ["Card type", "Sail", "Splash"]));
         copyIcons(iconTemplates, getPath(root, ["Card type", "Sail", "Icons"]), config["Icons"], {
-            "x": 130,
+            "x": 140,
             "y": 50,
             "center": false,
             "vertical": true,
