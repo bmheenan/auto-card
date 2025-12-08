@@ -14,20 +14,51 @@ automateCards({
 });
 
 function fillCard(config, root, iconTemplates) {
+    // Main toggle
     toggleOnly([config["Type"]], get(root, "Card type"));
-    var showPlayerCounts = config["Type"] === "Sail";
-    if (toggle(showPlayerCounts, get(root, "Player count bottom"))) {
-        set(config["Player count"], getPath(root, ["Player count bottom", "Player count bottom"]));
+
+    // Player counts
+    var showPlayerCounts = config["Type"] === "Encounter";
+    if (toggle(showPlayerCounts, get(root, "Player count"))) {
+        set(config["Player count"], getPath(root, ["Player count", "Count"]));
     }
-    if (config["Type"] === "Sail") {
-        set(config["Title"], getPath(root, ["Card type", "Sail", "Title"]));
-        set(config["Rank"], getPath(root, ["Card type", "Sail", "Rank", "Amount"]));
-        toggleOnly([config["Title"]], getPath(root, ["Card type", "Sail", "Splash"]));
-        copyIcons(iconTemplates, getPath(root, ["Card type", "Sail", "Icons"]), config["Icons"], {
-            "x": 140,
-            "y": 50,
-            "center": false,
-            "vertical": true,
-        })
+
+    // Character
+    if (config["Type"] === "Character") {
+        toggleOnly([config["Character"]], getPath(root, ["Card type", "Character"]));
+        toggleOnly([config["Variation"]], getPath(root, ["Card type", "Character", config["Character"], "Variation"]));
+    }
+
+    // Encounter
+    if (config["Type"] === "Encounter") {
+        // Encounter-based toggles
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Top banner"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Action"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Stash"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Splash"]));
+
+        // Plunder/Peril-based toggles and rank
+        if (config["Encounter"] == "Goods" || config["Encounter"] == "Treasure" || config["Encounter"] == "Artifact") {
+            // Plunder
+
+            // Bottom banner
+            toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
+
+            // Rank
+            toggle(false, getPath(root, ["Card type", "Encounter", "Peril rank"]));
+            toggle(true, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
+            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Plunder rank", "Rank"]));
+        }
+        if (config["Encounter"] == "Debauchery" || config["Encounter"] == "Storm" || config["Encounter"] == "Authority") {
+            // Peril
+
+            // Bottom banner
+            toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
+
+            // Rank
+            toggle(true, getPath(root, ["Card type", "Encounter", "Peril rank"]));
+            toggle(false, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
+            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Peril rank", "Rank"]));
+        }
     }
 }

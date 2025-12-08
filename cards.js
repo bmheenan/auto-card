@@ -1,6 +1,66 @@
 var cards_summary = [
+    {
+        "Type": "Character",
+        "Character": "Sid",
+    },
+    {
+        "Type": "Character",
+        "Character": "Hagar",
+    },
+    {
+        "Type": "Character",
+        "Character": "Riggs",
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Artifact",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 45,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Treasure",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 36,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Goods",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 27,
+
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Authority",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 18,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Storm",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 9,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Debauchery",
+        "Player count": "2+",
+        "Repeat": 5,
+        "Rank start": 1,
+    },
+    {
+        "Type": "Notoriety",
+        "Repeat": 6,
+    },
+    /*
     // 2 players
-    /*{
+    {
         "Type": "Sail",
         "Player count": "2+",
         "Title": "Peril",
@@ -299,7 +359,7 @@ var cards_summary = [
     {
         "Type": "Reputation",
         "Repeat": 21,
-    },*/
+    },
     {
         "Type": "Reputation",
         "Repeat": 42,
@@ -308,7 +368,7 @@ var cards_summary = [
         "Type": "Scoring",
         "Repeat": 16,
     },
-
+    */
 ];
 
 var cards = [];
@@ -322,7 +382,39 @@ function copyObj(input) {
 }
 
 for (var i = 0; i < cards_summary.length; i++) {
-    var rank = cards_summary[i]["Rank Start"];
+    var rank = cards_summary[i]["Rank start"];
+    if (cards_summary[i]["Type"] == "Character") {
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Loyalty back",
+        });
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Loyalty back",
+        });
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Loyal crew",
+        });
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Betrayer",
+        });
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Trusted",
+        });
+        cards.push({
+            "Type": "Character",
+            "Character": cards_summary[i]["Character"],
+            "Variation": "Accused",
+        });
+    }
     for (var j = 0; j < cards_summary[i]["Repeat"]; j++) {
         var card = copyObj(cards_summary[i]);
         if (rank) {
