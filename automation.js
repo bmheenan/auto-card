@@ -22,10 +22,9 @@ function fillCard(config, root, iconTemplates) {
         set(config["Player count"], getPath(root, ["Player count", "Count"]));
     }
 
-    // Character
-    if (config["Type"] === "Character") {
-        toggleOnly([config["Character"]], getPath(root, ["Card type", "Character"]));
-        toggleOnly([config["Variation"]], getPath(root, ["Card type", "Character", config["Character"], "Variation"]));
+    // Trusted/Marked
+    if (config["Type"] === "Trusted" || config["Type"] === "Marked") {
+        toggleOnly([config["Character"]], getPath(root, ["Card type", config["Type"], "Character"]));
     }
 
     // Encounter
@@ -63,23 +62,5 @@ function fillCard(config, root, iconTemplates) {
             toggle(false, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
             set(config["Rank"], getPath(root, ["Card type", "Encounter", "Peril rank", "Rank"]));
         }
-        /*if (config["Encounter"] == "Loyal crew") {
-            // Bottom banner
-            toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
-
-            // Rank
-            toggle(true, getPath(root, ["Card type", "Encounter", "Peril rank"]));
-            toggle(false, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
-            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Peril rank", "Rank"]));
-        }
-        if (config["Encounter"] == "Betrayer") {
-            // Bottom banner
-            toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
-
-            // Rank
-            toggle(false, getPath(root, ["Card type", "Encounter", "Peril rank"]));
-            toggle(true, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
-            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Plunder rank", "Rank"]));
-        }*/
     }
 }
