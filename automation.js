@@ -30,7 +30,7 @@ function fillCard(config, root, iconTemplates) {
     // Encounter
     if (config["Type"] === "Encounter") {
         // Encounter-based toggles
-        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Top banner"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Top banner", "Icon"]));
         toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Action"]));
         toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Stash"]));
         toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Splash"]));
@@ -41,7 +41,12 @@ function fillCard(config, root, iconTemplates) {
         ) {
             // Plunder
 
-            // Bottom banner
+            // Top and bottom banner
+            set(
+                config["Encounter"],
+                getPath(root, ["Card type", "Encounter", "Top banner", "Background", "Plunder", "Title"])
+            );
+            toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Top banner", "Background"]));
             toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
 
             // Rank
@@ -54,7 +59,12 @@ function fillCard(config, root, iconTemplates) {
         ) {
             // Peril
 
-            // Bottom banner
+            // Top and bottom banner
+            set(
+                config["Encounter"],
+                getPath(root, ["Card type", "Encounter", "Top banner", "Background", "Peril", "Title"])
+            );
+            toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Top banner", "Background"]));
             toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
 
             // Rank
@@ -62,5 +72,10 @@ function fillCard(config, root, iconTemplates) {
             toggle(false, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
             set(config["Rank"], getPath(root, ["Card type", "Encounter", "Peril rank", "Rank"]));
         }
+    }
+
+    // Notoriety
+    if (config["Type"] === "Notoriety") {
+        toggle(config["x3"], getPath(root, ["Card type", "Notoriety", "x3"]));
     }
 }

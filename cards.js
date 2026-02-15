@@ -5,64 +5,64 @@ var cards_summary = [
         "Character": "Sid",
     },
     {
-        "Type": "Trusted",
-        "Character": "Decibel",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Riggs",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Riff",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Nova",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Penn",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Quinn",
-    },
-    {
-        "Type": "Trusted",
-        "Character": "Vantage",
-    },
-    {
         "Type": "Marked",
         "Character": "Sid",
     },
     {
+        "Type": "Trusted",
+        "Character": "Decibel",
+    },
+    {
         "Type": "Marked",
         "Character": "Decibel",
+    },
+    {
+        "Type": "Trusted",
+        "Character": "Riggs",
     },
     {
         "Type": "Marked",
         "Character": "Riggs",
     },
     {
+        "Type": "Trusted",
+        "Character": "Arif",
+    },
+    {
         "Type": "Marked",
-        "Character": "Riff",
+        "Character": "Arif",
+    },
+    {
+        "Type": "Trusted",
+        "Character": "Nova",
     },
     {
         "Type": "Marked",
         "Character": "Nova",
     },
     {
+        "Type": "Trusted",
+        "Character": "Penn",
+    },
+    {
         "Type": "Marked",
         "Character": "Penn",
+    },
+    {
+        "Type": "Trusted",
+        "Character": "Quinn",
     },
     {
         "Type": "Marked",
         "Character": "Quinn",
     },
     {
+        "Type": "Trusted",
+        "Character": "Rowan",
+    },
+    {
         "Type": "Marked",
-        "Character": "Vantage",
+        "Character": "Rowan",
     },
     /*
 
@@ -70,14 +70,14 @@ var cards_summary = [
     {
         "Type": "Encounter",
         "Encounter": "Loyal crew",
-        "Repeat": 6,
-        "Rank": 35,
+        "Repeat": 5,
+        "Rank": 48,
     },
     {
         "Type": "Encounter",
         "Encounter": "Betrayer",
-        "Repeat": 6,
-        "Rank": 34,
+        "Repeat": 5,
+        "Rank": 1,
     },
 
     // Core encounter cards
@@ -85,21 +85,21 @@ var cards_summary = [
     {
         "Type": "Encounter",
         "Encounter": "Artifact",
-        "Player count": "2+",
-        "Repeat": 4,
-        "Rank start": 73,
+        "Player count": "2",
+        "Repeat": 5,
+        "Rank start": 72,
     },
     {
         "Type": "Encounter",
         "Encounter": "Treasure",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 3,
-        "Rank start": 61,
+        "Rank start": 60,
     },
     {
         "Type": "Encounter",
         "Encounter": "Goods",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 4,
         "Rank start": 49,
 
@@ -107,44 +107,44 @@ var cards_summary = [
     {
         "Type": "Encounter",
         "Encounter": "Authority",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 5,
-        "Rank start": 31,
+        "Rank start": 32,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
-        "Player count": "2+",
-        "Repeat": 4,
+        "Player count": "2",
+        "Repeat": 5,
         "Rank start": 16,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 4,
-        "Rank start": 1,
+        "Rank start": 2,
     },
 
     // 3+
     {
         "Type": "Encounter",
         "Encounter": "Artifact",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 1,
         "Rank start": 77,
     },
     {
         "Type": "Encounter",
         "Encounter": "Treasure",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 1,
-        "Rank start": 64,
+        "Rank start": 63,
     },
     {
         "Type": "Encounter",
         "Encounter": "Goods",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 1,
         "Rank start": 53,
 
@@ -152,96 +152,100 @@ var cards_summary = [
     {
         "Type": "Encounter",
         "Encounter": "Authority",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 2,
-        "Rank start": 36,
+        "Rank start": 37,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 3,
-        "Rank start": 20,
+        "Rank start": 21,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
-        "Player count": "3+",
+        "Player count": "3",
         "Repeat": 2,
-        "Rank start": 5,
+        "Rank start": 6,
     },
 
     // 4+
     {
         "Type": "Encounter",
         "Encounter": "Artifact",
-        "Player count": "4+",
-        "Repeat": 2,
+        "Player count": "4",
+        "Repeat": 1,
         "Rank start": 78,
     },
     {
         "Type": "Encounter",
         "Encounter": "Treasure",
-        "Player count": "4+",
+        "Player count": "4",
         "Repeat": 3,
-        "Rank start": 65,
+        "Rank start": 64,
     },
     {
         "Type": "Encounter",
         "Encounter": "Goods",
-        "Player count": "4+",
-        "Repeat": 2,
+        "Player count": "4",
+        "Repeat": 1,
         "Rank start": 54,
 
     },
     {
         "Type": "Encounter",
         "Encounter": "Authority",
-        "Player count": "4+",
+        "Player count": "4",
         "Repeat": 1,
-        "Rank start": 38,
+        "Rank start": 39,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
-        "Player count": "4+",
+        "Player count": "4",
         "Repeat": 1,
-        "Rank start": 23,
+        "Rank start": 24,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
-        "Player count": "4+",
+        "Player count": "4",
         "Repeat": 1,
-        "Rank start": 7,
+        "Rank start": 8,
     },
 
     // Notoriety
     {
         "Type": "Notoriety",
-        "Repeat": 5,
+        "Repeat": 10,
     },
-
+    {
+        "Type": "Notoriety",
+        "x3": true,
+        "Repeat": 10,
+    },
     /*
     // One of each Encounter
     {
         "Type": "Encounter",
         "Encounter": "Artifact",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 50,
     },
     {
         "Type": "Encounter",
         "Encounter": "Treasure",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 43,
     },
     {
         "Type": "Encounter",
         "Encounter": "Goods",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 36,
 
@@ -261,23 +265,67 @@ var cards_summary = [
     {
         "Type": "Encounter",
         "Encounter": "Authority",
-        "Player count": "2+",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 22,
     },
     {
         "Type": "Encounter",
-        "Encounter": "Debauchery",
-        "Player count": "2+",
+        "Encounter": "Storm",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 11,
     },
     {
         "Type": "Encounter",
-        "Encounter": "Storm",
-        "Player count": "2+",
+        "Encounter": "Debauchery",
+        "Player count": "2",
         "Repeat": 1,
         "Rank start": 1,
+    },
+    {
+        "Type": "Notoriety",
+        "x3": true,
+        "Repeat": 1,
+    },
+    */
+    /*
+    // For show
+    {
+        "Type": "Encounter",
+        "Encounter": "Artifact",
+        "Player count": "2",
+        "Repeat": 1,
+        "Rank start": 50,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Treasure",
+        "Player count": "3",
+        "Repeat": 1,
+        "Rank start": 43,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Goods",
+        "Player count": "4",
+        "Repeat": 1,
+        "Rank start": 36,
+
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Authority",
+        "Player count": "5",
+        "Repeat": 1,
+        "Rank start": 23,
+    },
+    {
+        "Type": "Encounter",
+        "Encounter": "Storm",
+        "Player count": "6",
+        "Repeat": 1,
+        "Rank start": 11,
     },
     */
 ];
