@@ -17,11 +17,6 @@ function fillCard(config, root, iconTemplates) {
     // Main toggle
     toggleOnly([config["Type"]], get(root, "Card type"));
 
-    // Player counts
-    if (toggle(config["Player count"], get(root, "Player count"))) {
-        set(config["Player count"], getPath(root, ["Player count", "Count"]));
-    }
-
     // Trusted/Marked
     if (config["Type"] === "Trusted" || config["Type"] === "Marked") {
         toggleOnly([config["Character"]], getPath(root, ["Card type", config["Type"], "Character"]));
@@ -29,49 +24,42 @@ function fillCard(config, root, iconTemplates) {
 
     // Encounter
     if (config["Type"] === "Encounter") {
-        // Encounter-based toggles
-        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Top banner", "Icon"]));
-        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Action"]));
-        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Stash"]));
-        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Splash"]));
-
-        // Plunder/Peril-based toggles and rank
-        if (config["Encounter"] == "Goods" || config["Encounter"] == "Treasure" || config["Encounter"] == "Artifact"
-            || config["Encounter"] == "Loyal crew"
-        ) {
-            // Plunder
-
-            // Top and bottom banner
-            set(
-                config["Encounter"],
-                getPath(root, ["Card type", "Encounter", "Top banner", "Background", "Plunder", "Title"])
-            );
-            toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Top banner", "Background"]));
-            toggleOnly(["Plunder"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
-
-            // Rank
-            toggle(false, getPath(root, ["Card type", "Encounter", "Peril rank"]));
-            toggle(true, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
-            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Plunder rank", "Rank"]));
-        }
+        var plunderPeril = "Plunder";
+        var morningNight = "Night";
         if (config["Encounter"] == "Debauchery" || config["Encounter"] == "Storm" || config["Encounter"] == "Authority"
             || config["Encounter"] == "Betrayer"
         ) {
-            // Peril
-
-            // Top and bottom banner
-            set(
-                config["Encounter"],
-                getPath(root, ["Card type", "Encounter", "Top banner", "Background", "Peril", "Title"])
-            );
-            toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Top banner", "Background"]));
-            toggleOnly(["Peril"], getPath(root, ["Card type", "Encounter", "Bottom banner"]));
-
-            // Rank
-            toggle(true, getPath(root, ["Card type", "Encounter", "Peril rank"]));
-            toggle(false, getPath(root, ["Card type", "Encounter", "Plunder rank"]));
-            set(config["Rank"], getPath(root, ["Card type", "Encounter", "Peril rank", "Rank"]));
+            plunderPeril = "Peril";
         }
+        if (config["Encounter"] == "Artifact" || config["Encounter"] == "Storm"
+            || config["Encounter"] == "Debauchery"
+        ) {
+            morningNight = "Morning";
+        }
+
+        if (toggle(config["Player count"], getPath(root, ["Card type", "Encounter", "Player count"]))) {
+            toggleOnly([plunderPeril], getPath(root, ["Card type", "Encounter", "Player count"]));
+            set(
+                config["Player count"],
+                getPath(root, ["Card type", "Encounter", "Player count", plunderPeril, "Count"])
+            );
+        }
+
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Icon"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Action"]));
+        toggleOnly([morningNight], getPath(root, ["Card type", "Encounter", "Background for action"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Stash"]));
+        toggleOnly([plunderPeril], getPath(root, ["Card type", "Encounter", "Background for stash"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Splash"]));
+        toggleOnly([config["Encounter"]], getPath(root, ["Card type", "Encounter", "Effect"]));
+
+        set(
+            config["Encounter"],
+            getPath(root, ["Card type", "Encounter", "Header", plunderPeril, "Title"])
+        );
+        toggleOnly([plunderPeril], getPath(root, ["Card type", "Encounter", "Header"]));
+        toggleOnly([plunderPeril], getPath(root, ["Card type", "Encounter", "Rank"]));
+        set(config["Rank"], getPath(root, ["Card type", "Encounter", "Rank", plunderPeril, "Rank"]));
     }
 
     // Notoriety

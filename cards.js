@@ -1,4 +1,5 @@
 var cards_summary = [
+    /*
     // Trusted/Marked cards
     {
         "Type": "Trusted",
@@ -64,14 +65,13 @@ var cards_summary = [
         "Type": "Marked",
         "Character": "Rowan",
     },
-    /*
-
+    */
     // Loyalty cards
     {
         "Type": "Encounter",
         "Encounter": "Loyal crew",
         "Repeat": 5,
-        "Rank": 48,
+        "Rank": 2,
     },
     {
         "Type": "Encounter",
@@ -109,21 +109,21 @@ var cards_summary = [
         "Encounter": "Authority",
         "Player count": "2",
         "Repeat": 5,
-        "Rank start": 32,
+        "Rank start": 3,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
         "Player count": "2",
         "Repeat": 5,
-        "Rank start": 16,
+        "Rank start": 33,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
         "Player count": "2",
         "Repeat": 4,
-        "Rank start": 2,
+        "Rank start": 19,
     },
 
     // 3+
@@ -154,23 +154,22 @@ var cards_summary = [
         "Encounter": "Authority",
         "Player count": "3",
         "Repeat": 2,
-        "Rank start": 37,
+        "Rank start": 8,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
         "Player count": "3",
         "Repeat": 3,
-        "Rank start": 21,
+        "Rank start": 38,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
         "Player count": "3",
         "Repeat": 2,
-        "Rank start": 6,
+        "Rank start": 23,
     },
-
     // 4+
     {
         "Type": "Encounter",
@@ -199,23 +198,22 @@ var cards_summary = [
         "Encounter": "Authority",
         "Player count": "4",
         "Repeat": 1,
-        "Rank start": 39,
+        "Rank start": 10,
     },
     {
         "Type": "Encounter",
         "Encounter": "Storm",
         "Player count": "4",
         "Repeat": 1,
-        "Rank start": 24,
+        "Rank start": 41,
     },
     {
         "Type": "Encounter",
         "Encounter": "Debauchery",
         "Player count": "4",
         "Repeat": 1,
-        "Rank start": 8,
+        "Rank start": 25,
     },
-
     // Notoriety
     {
         "Type": "Notoriety",
@@ -254,13 +252,13 @@ var cards_summary = [
         "Type": "Encounter",
         "Encounter": "Loyal crew",
         "Repeat": 1,
-        "Rank": 35,
+        "Rank": 2,
     },
     {
         "Type": "Encounter",
         "Encounter": "Betrayer",
         "Repeat": 1,
-        "Rank": 34,
+        "Rank": 1,
     },
     {
         "Type": "Encounter",
